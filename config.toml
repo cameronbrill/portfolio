@@ -1,4 +1,4 @@
-baseurl = "http://www.cameronbrill.me/"
+baseurl = "http://cameronbrill.me/"
 title = "cameronbrill"
 
 theme = "hugo-coder"
@@ -69,7 +69,7 @@ disqusShortname = "yourdiscussshortname"
     name = "Resume"
     icon = "fab fa-file"
     weight = 3
-    url = "/cameron-brill-resume.pdf"
+    url = "cameron-brill-resume.pdf"
 [[params.social]]
     name = "LinkedIn"
     icon = "fab fa-linkedin"
