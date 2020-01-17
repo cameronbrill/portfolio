@@ -1,4 +1,4 @@
-baseurl = "http://www.cameronbrill.me"
+baseurl = "http://www.cameronbrill.me/"
 title = "cameronbrill"
 
 theme = "hugo-coder"
@@ -75,7 +75,7 @@ disqusShortname = "yourdiscussshortname"
     icon = "fab fa-linkedin"
     weight = 4
     url = "https://www.linkedin.com/in/cameronbrill/"
-    
+
 
 [languages]
     [languages.en]
