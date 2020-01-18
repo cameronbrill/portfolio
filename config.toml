@@ -64,12 +64,12 @@ disqusShortname = "yourdiscussshortname"
     name = "Devpost"
     icon = "fa fa-medal"
     weight = 2
-    url = "https://gitlab.com/cameronbrill/"
+    url = "https://devpost.com/cameronbrill/"
 [[params.social]]
     name = "Resume"
     icon = "fa fa-file"
     weight = 3
-    url = "cameron-brill-resume.pdf"
+    url = "public/cameron_brill_resume.pdf"
 [[params.social]]
     name = "LinkedIn"
     icon = "fab fa-linkedin"
@@ -110,7 +110,7 @@ disqusShortname = "yourdiscussshortname"
 
         [languages.cn.params]
             author = "林霄郡"
-            info = "男人"
+            info = "程序员"
             description = "林霄郡的个人投资组合"
             keywords = "blog,desenvolvedor,pessoal"
             footercontent = "我愛吃飯."
@@ -128,7 +128,7 @@ disqusShortname = "yourdiscussshortname"
             url = "posts/"
 
             [[languages.cn.menu.main]]
-            name = "工程"
+            name = "项目"
             weight = 3
             url = "projects/"
 
