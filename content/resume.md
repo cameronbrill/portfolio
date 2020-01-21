@@ -1,7 +1,6 @@
 ---
 title: "My Resume"
 date: 2020-01-01T00:00:00-06:00
-slug: my-resume
 draft: false
 ---
 
