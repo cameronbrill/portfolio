@@ -1,7 +1,11 @@
 ---
 title: "My First Post"
 date: 2020-01-21T13:03:48-06:00
-draft: true
+slug: my-first-post
+tags: ["testing", "first"]
+categories: ["Production Testing"]
+series: ["First Post"]
+draft: false
 ---
 
 # This is my first post
