@@ -69,7 +69,7 @@ disqusShortname = "yourdiscussshortname"
     name = "Resume"
     icon = "fa fa-file"
     weight = 3
-    url = "public/cameron_brill_resume.pdf"
+    url = "resume/"
 [[params.social]]
     name = "LinkedIn"
     icon = "fab fa-linkedin"
