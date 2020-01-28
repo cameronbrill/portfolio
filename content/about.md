@@ -16,12 +16,12 @@ In my freetime, I cook Sichuanese food and make homemade kombucha. I also love t
 ## Some Background
 
 Most of my experience lies in backend web development. I am currently applying my skils in the following:
-* TAMUhack, Technology Director fron Oct 2019 - Present
-* DynamicMC, Founder from Nov 2019 - Present
+* **TAMUhack**, Technology Director from Oct 2019 - Present
+* **DynamicMC**, Founder from Nov 2019 - Present
 
 These skills stem from my internships and jobs in which I partook:
-* State Farm, Software Engineering Intern in Summer 2019
-* Reveal Modern, Software Engineering Intern in Spring 2018 and Full-Stack Developer in Spring 2019
-* Parkland Hospital, Technology Intern in Summer 2017
+* **State Farm**, Software Engineering Intern in Summer 2019
+* **Reveal Modern**, Software Engineering Intern in Spring 2018 and Full-Stack Developer in Spring 2019
+* **Parkland Hospital**, Technology Intern in Summer 2017
 
-This summer, I will be the following applying my knowledge as a Software Engineering Intern at Microsoft.
+This summer, I will be the following applying my knowledge as a Software Engineering Intern at **Microsoft**.
