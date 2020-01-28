@@ -1,6 +1,6 @@
 ---
 title: "Sustainability Index"
-date: 2020-01-21T13:21:46-06:00
+date: 2019-11-03T12:00:00-06:00
 slug: sustainability-index
 tags: ["hacktx", "pandas", "python"]
 categories: ["Hackathon"]
