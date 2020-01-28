@@ -15,7 +15,7 @@ In my freetime, I cook Sichuanese food and make homemade kombucha. I also love t
 
 ## Some Background
 
-Most of my experience lies in backend web development. I am currently applying my skils in the following:
+Most of my experience lies in backend web development. I am currently applying my skills in the following:
 * **TAMUhack**, Technology Director from Oct 2019 - Present
 * **DynamicMC**, Founder from Nov 2019 - Present
 
