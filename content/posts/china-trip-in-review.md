@@ -20,7 +20,7 @@ Strict guidelines and organized chaos. Cameras at every corner, overseers watchi
 
 A Holiday Inn accross the way from our room. Minutes from Shanghai Station. Prime location brings us to dinner.
 
-Sichuanese food. Generous parents. My first meal in the forbidden land.
+Shanghainese food. Generous parents. My first meal in the forbidden land.
 
 
 ## Hangzhou
