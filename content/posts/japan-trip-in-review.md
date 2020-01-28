@@ -3,7 +3,7 @@ title: "Japan Trip In Review"
 date: 2018-06-08T12:00:00-06:00
 slug: japan-trip-in-review
 tags: ["travel", "japan", "asia"]
-categories: ["Japan Travel"]
+categories: ["Travel"]
 series: ["Travel"]
 draft: false
 ---
