@@ -30,6 +30,8 @@ Shanghainese food. Generous parents. My first meal in the forbidden land.
 
 ## Nanjing
 
+Wild rides. Smoke filled the taxi, report. Run around with sore feet, meet with a friend.
+
 
 ## Shanghai Pt. 2
 
