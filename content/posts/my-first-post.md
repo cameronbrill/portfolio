@@ -5,7 +5,7 @@ slug: my-first-post
 tags: ["testing", "first"]
 categories: ["Production Testing"]
 series: ["First Post"]
-draft: false
+draft: true
 ---
 
 # This is my first post
