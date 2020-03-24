@@ -1,5 +1,5 @@
 ---
-title: "Japan Trip In Review"
+title: "Japan - The Big Seven"
 date: 2018-06-08T12:00:00-06:00
 slug: japan-trip-in-review
 tags: ["travel", "japan", "asia"]
@@ -20,7 +20,7 @@ I got my luggage. I search for my friend. Found him.
 
 We get pocket wifi. We get train tickets. I eat my first onigiri. We depart.
 
-## Tokyo Pt. 1
+## Tokyo 
 
 ### nine hours
 
@@ -73,6 +73,11 @@ Definition of Shinjuku Station: chaos, ochazuke, and trains.
 ### Mountain
 
 
-## Tokyo Pt. 2
+## Sendai
+
+### Gyutan
+
+
+## Tokyo Finale
 
 ### Tsukiji
