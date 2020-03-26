@@ -32,6 +32,11 @@ Definition of Shinjuku Station: chaos, ochazuke, and trains.
 
 ### Muan
 
+I enter. The lady exclaims "OH! You must be Brad's friend! Here, you can see his signature!" I look. She is very nice.
+
+Osusume. Delicious gastronomy. A view into the local.
+
+Soy sauce ice cream. Creamy with a bite. Number one ice cream.
 
 ## Kyoto
 
