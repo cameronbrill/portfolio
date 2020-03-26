@@ -14,4 +14,4 @@ draft: true
 
 ### I ate at Altura 
 
-Fancy meal, very yum.
+Italian. 18 courses. Creative, innovative, delicious. Altura is everything that I love about food. Each bite imparted a different emotion. My eyes teared up as I ate everything. I love Altura.
