@@ -42,8 +42,17 @@ Soy sauce ice cream. Creamy with a bite. Number one ice cream.
 
 ### Temple
 
+500 year old buildings, stone roads, freshly groomed rock gardens.
+
+Tatami, futon, shoji.
+
+I am living in history.
+
 ### Onsen 
 
+Warm. Nude. Distraught.
+
+Relaxed. Rehealed. Zen.
 
 ## Osaka
 
