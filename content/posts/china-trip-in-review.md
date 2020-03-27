@@ -27,6 +27,7 @@ Shanghainese food. Generous parents. My first meal in the forbidden land.
 
 ### West Lake
 
+Sweet, viscous rice alcohol. Fresh, slimy river shrimps. Hearty, tea roasted duck.
 
 ## Nanjing
 
