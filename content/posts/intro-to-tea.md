@@ -14,6 +14,8 @@ I started drinking tea in 10th grade to cope with my mom's illness. It was a gre
 
 Through the years between then and now, I went from a casual tea drinker to a connesieur. Over the summer of 2019, I attended multiple classes at The Cultured Cup to learn about different types of teas, their histories, tasting notes, and varieties. Thus began my trip into the expensive hobby that is tea.
 
+I most recently explored my love for tea in China. I visited Hangzhou, home to the famous Longjing green tea. At the tea shop I visited, the owner let me try many teas until she believed I couldn't properly taste tea anymore. It was heaven. 
+
 ### Oolong
 
 ### Pu-erh
