@@ -18,6 +18,8 @@ I most recently explored my love for tea in China. I visited Hangzhou, home to t
 
 ### Oolong
 
+Commonly cultivated in Taiwan, oolong tea is one of the most popular teas in the world. A slightly oxidized green tea, oolong has slight notes of bitterness and high content of L-Theanine. This tea makes me very tea drunk, it is my second favorite.
+
 ### Pu-erh
 
 ### Green Tea
