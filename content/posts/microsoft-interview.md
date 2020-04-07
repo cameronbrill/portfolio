@@ -10,6 +10,10 @@ draft: true
 
 # I got interviewed
 
+## The interview content
+
+My interview was fairly straightforward. It was a new format: 2 part interview. The first interview was the technical round. During the technical round, I was asked about my projects and how to architect a fullstack application. The second interview was behavioral, based around my experiences in the industry and how I go about solving problems. It was an overall good experience and fairly easy interview.
+
 ## I went to eat
 
 ### I ate at Altura 
