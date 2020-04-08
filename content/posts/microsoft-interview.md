@@ -5,7 +5,7 @@ slug: microsoft-in-seattle
 tags: ["microsoft", "interview", "food"]
 categories: ["travel"]
 series: ["interviews"]
-draft: true
+draft: false
 ---
 
 # I got interviewed
