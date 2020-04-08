@@ -38,6 +38,10 @@ Wild rides. Smoke filled the taxi, report. Run around with sore feet, meet with 
 
 ### New Years
 
+Soju. Frat boys. Multiple trips to Chinese BBQ.
+
+Head ache. Body sore. A new experience.
+
 
 ## Suzhou
 
