@@ -58,11 +58,21 @@ Relaxed. Rehealed. Zen.
 
 ### Okonomiyaki
 
+Michelin stars. New flavors. Fusion.
+
 ### Takoyaki
+
+Fire balls. Complex flavors. Umami.
 
 ### Castle
 
+Large. Exciting. Crowded
+
+History. Tourists. Un-unique.
+
 ### Aquarium
+
+Abundant animals. Sharks and whales. Controversial.
 
 
 ## Nara
