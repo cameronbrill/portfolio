@@ -16,6 +16,10 @@ My interview was fairly straightforward. It was a new format: 2 part interview. 
 
 ## I went to eat
 
-### I ate at Altura 
+### RN94
 
-Italian. 18 courses. Creative, innovative, delicious. Altura is everything that I love about food. Each bite imparted a different emotion. My eyes teared up as I ate everything. I love Altura.
+New American. Fairly average medium-upscale dining experience. Nothing to write home about(ironic).
+
+### Altura 
+
+Italian. 18 courses. Creative, innovative, delicious. Altura is everything that I love about food. Each bite imparted a different emotion. My eyes teared up as I ate everything. I love Altura. This is my new favorite restaurant in the US.
