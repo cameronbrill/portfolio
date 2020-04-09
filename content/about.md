@@ -10,7 +10,9 @@ I am a Computer Science Honors student at Texas A&M University with a strong int
 
 In my freetime, I cook Sichuanese food and make homemade kombucha. I also love traveling. This [map](https://drive.google.com/open?id=1c79jtpQB5MpIzMxGQ-aAXcRqmA2pFt3M&usp=sharing) shows all of the places I've visited in my memory.
 
+{{< rawhtml >}}
 <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1c79jtpQB5MpIzMxGQ-aAXcRqmA2pFt3M" width="640" height="480"></iframe>
+{{< /rawhtml >}}
 
 
 ## Some Background
@@ -24,4 +26,4 @@ These skills stem from my internships and jobs in which I partook:
 * **Reveal Modern**, Software Engineering Intern in Spring 2018 and Full-Stack Developer in Spring 2019
 * **Parkland Hospital**, Technology Intern in Summer 2017
 
-This summer, I will be the following applying my knowledge as a Software Engineering Intern at **Microsoft**.
+This summer, I will be the following applying my knowledge remotely as a Software Engineering Intern at **Microsoft**.
