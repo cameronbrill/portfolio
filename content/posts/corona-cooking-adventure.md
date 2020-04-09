@@ -18,3 +18,4 @@ draft: false
 * Sous vide hamburger
 * Homemade pizza
 * Homemade curry
+* Cast-iron wok seasoning
