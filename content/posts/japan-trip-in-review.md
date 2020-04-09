@@ -77,31 +77,36 @@ Abundant animals. Sharks and whales. Controversial.
 
 ## Nara
 
-### Deer
+Abundant animals. Deer and humans. Controversial
 
 
 ## Kobe
 
-### Steak
+Chateubriand. Izakaya steak. Tender love.
 
 
 ## Hiroshima
 
 ### Okonomiyaki
 
+Noodles. Heavy carbs. Pork. Hearty.
+
 ### Tragedy
+
+Many killed. Many remembered. Many depressed.
 
 
 ## Miyajima
 
-### Mountain
+Island. Mountain. Boulder. Wasp.
 
 
 ## Sendai
 
-### Gyutan
-
+Walking around aimlessly. Biting our tongues. One day.
 
 ## Tokyo Finale
 
 ### Tsukiji
+
+Coffee before sushi. Massive tunas. Sickness.
