@@ -45,8 +45,14 @@ Head ache. Body sore. A new experience.
 
 ## Suzhou
 
+Eel. Clean. New construction.
+
 
 ## Shanghai Pt. 3
 
+Holiday Inn. Unlimited Japanese food. A new knife.
+
 
 ## Chongqing
+
+Confusion. Hot pot. Spice. Bliss.
