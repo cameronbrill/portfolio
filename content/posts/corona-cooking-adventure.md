@@ -16,6 +16,8 @@ draft: false
 * suan tu dao
 * take out pizza
 * Sous vide hamburger
+* Sous vide NY Strip
 * Homemade pizza
 * Homemade curry
 * Cast-iron wok seasoning
+* Sous vide ribeye
