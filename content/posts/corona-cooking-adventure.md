@@ -21,3 +21,4 @@ draft: false
 * Homemade curry
 * Cast-iron wok seasoning
 * Sous vide ribeye
+* Coq au vin
