@@ -3,7 +3,7 @@ title: "Cooking in Time of Pandemic"
 date: 2020-03-26T12:00:00-06:00
 slug: corona-cooking-adventure 
 tags: ["china", "culinary"]
-categories: ["Culinary"]
+categories: ["Pandemics", "Culinary"]
 series: ["Culinary"]
 draft: false
 ---
