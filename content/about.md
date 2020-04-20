@@ -27,4 +27,4 @@ These skills stem from my internships and jobs in which I partook:
 * **Reveal Modern**, Software Engineering Intern in Spring 2018 and Full-Stack Developer in Spring 2019
 * **Parkland Hospital**, Technology Intern in Summer 2017
 
-This summer, I will be the following applying my knowledge remotely as a Software Engineering Intern at **Microsoft**.
+This summer, I will be applying my knowledge remotely as a Software Engineering Intern at **Microsoft**.
