@@ -110,3 +110,5 @@ Walking around aimlessly. Biting our tongues. One day.
 ### Tsukiji
 
 Coffee before sushi. Massive tunas. Sickness.
+
+Board the plane. Land of the free. Sadness.
