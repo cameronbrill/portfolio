@@ -22,3 +22,4 @@ draft: false
 * Cast-iron wok seasoning
 * Sous vide ribeye
 * Coq au vin
+* Eggs
