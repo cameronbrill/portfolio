@@ -22,6 +22,8 @@ Commonly cultivated in Taiwan, oolong tea is one of the most popular teas in the
 
 ### Pu-erh
 
+A commonly fermented tea, this lasts for a long time and will often gain complexity the longer you let it sit. Very dark and full bodied, pu-erhs are my favorite tea. They make me feel good over all and very energetic.
+
 ### Green Tea
 
 ### Red Tea
