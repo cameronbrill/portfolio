@@ -50,7 +50,7 @@ Eel. Clean. New construction.
 
 ## Shanghai Pt. 3
 
-Holiday Inn. Unlimited Japanese food. A new knife.
+Holiday Inn. Unlimited Japanese food. A new cleaver.
 
 
 ## Chongqing
