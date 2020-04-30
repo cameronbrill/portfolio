@@ -9,6 +9,7 @@ draft: true
 ---
 
 ## no sleep
+Theres a rhythm to hackathons. This includes a lack of sleep. If you play your cards right though, you can sleep(I typically sleep 6 hours at hackathons).
 
 ## write code
 
