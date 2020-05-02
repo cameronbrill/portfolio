@@ -28,3 +28,8 @@ These skills stem from my internships and jobs in which I partook:
 * **Parkland Hospital**, Technology Intern in Summer 2017
 
 This summer, I will be applying my knowledge remotely as a Software Engineering Intern at **Microsoft**.
+
+### Awards Received
+* **MLH Top 50 Hacker of 2020**
+* **1517 Fellowship**
+* **15+ Hackathons won**
