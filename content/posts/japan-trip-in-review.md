@@ -101,10 +101,6 @@ Many killed. Many remembered. Many depressed.
 Island. Mountain. Boulder. Wasp.
 
 
-## Sendai
-
-Walking around aimlessly. Biting our tongues. One day.
-
 ## Tokyo Finale
 
 ### Tsukiji
@@ -112,3 +108,8 @@ Walking around aimlessly. Biting our tongues. One day.
 Coffee before sushi. Massive tunas. Sickness.
 
 Board the plane. Land of the free. Sadness.
+
+
+## Sendai
+
+Walking around aimlessly. Biting our tongues. One day.
