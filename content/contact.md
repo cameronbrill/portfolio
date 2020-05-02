@@ -7,4 +7,4 @@ draft: false
 potfolio (at) cameronbrill (dot) me
 
 
-Also feel free to message me on [Linkedin](https://www.linkedin.com/in/cameronbrill/).
+Also feel free to message me on [LinkedIn](https://www.linkedin.com/in/cameronbrill/).
