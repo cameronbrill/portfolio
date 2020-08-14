@@ -19,15 +19,15 @@ In my freetime, I cook Sichuanese food and ferment things at home (including kom
 
 Most of my experience lies in backend web development. I am currently applying my skills in the following:
 * **TAMUhack**, Tech Lead from Mar 2020 - Present
-* **DynamicMC**, Founder from Nov 2019 - Present
+* **Dive**, Software Engineer from Aug 2020 - Present
 
 These skills stem from my internships and jobs in which I partook:
+* **Microsoft**, Software Engineering Intern from May 2020 - Aug 2020
 * **TAMUhack**, Technology Director from Oct 2019 - Mar 2020
 * **State Farm**, Software Engineering Intern in Summer 2019
-* **Reveal Modern**, Software Engineering Intern in Spring 2018 and Full-Stack Developer in Spring 2019
+* **Reveal Modern**, Software Engineering Intern in Spring 2018 and Spring 2019
 * **Parkland Hospital**, Technology Intern in Summer 2017
 
-This summer, I will be applying my knowledge remotely as a Software Engineering Intern at **Microsoft**.
 
 ### Awards Received
 * **MLH Top 50 Hacker of 2020**
