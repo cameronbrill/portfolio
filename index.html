@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Poppins';
+            font-size: 22px;
+        }
+
+        .content {
+            height: 200px;
+            position: absolute;
+            /*Can also be `fixed`*/
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding-bottom: 5%;
+            margin: auto;
+            /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
+            max-width: 100%;
+            max-height: 100%;
+            overflow: auto;
+        }
+
+        .name {
+            font-weight: 600;
+            font-size: 65px;
+            text-align: center;
+        }
+
+        .title {
+            font-weight: 200;
+            font-size: 20px;
+            text-align: center;
+            padding-bottom: 24px;
+        }
+
+        .element {
+            text-align: center;
+            display: inline-block;
+            padding: 4px;
+            padding-right: 6px;
+            padding-left: 6px;
+            color: black;
+            font-size: 25px;
+        }
+
+        .links {
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+            width: max-content;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+        }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PDFHZPK');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDFHZPK" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="content">
+        <div class="name">cameron brill</div>
+        <div class="title">software engineer and home chef</div>
+        <div class="links">
+            <a class="element" href="./public/cameron_brill_resume.pdf">resume</a>
+            <a class="element" href="https://www.github.com/cameronbrill">github</a>
+            <a class="element" href="https://www.devpost.com/cameronbrill">devpost</a>
+            <a class="element" href="https://www.linkedin.com/in/cameronbrill">linkedin</a>
+        </div>
+    </div>
+</body>
+
+</html>
