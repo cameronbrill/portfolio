@@ -18,6 +18,5 @@ jobs:
           --data '{"event_type": "pong", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
       - name: Checkout submodules
         if: github.event.action == 'ack'
-        uses: srt32/git-actions@v0.0.3
-        with:
-          args: git submodule update --remote
+        run: |
+          git submodule update --remote --recursive
