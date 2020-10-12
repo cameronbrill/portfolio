@@ -1,4 +1,4 @@
 [submodule "public/resume"]
 	path = public/resume
-	url = https://github.com:cameronbrill/resume.git
+	url = https://github.com/cameronbrill/resume
 	update = merge
