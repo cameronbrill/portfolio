@@ -17,6 +17,7 @@ jobs:
           -u ${{ secrets.ACCESS_TOKEN }} \
           --data '{"event_type": "pong", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
       - name: Checkout submodules
+        if: github.event.action == 'ack'
         uses: textbook/git-checkout-submodule-action@master
         with:
           remote: true
