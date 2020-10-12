@@ -16,7 +16,18 @@ jobs:
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.ACCESS_TOKEN }} \
           --data '{"event_type": "pong", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
-      - name: Checkout submodules
+      - name: Checkout repo
+        if: github.event.action == 'ack'
+        uses: actions/checkout@v2
+      - name: Update resume submodule
         if: github.event.action == 'ack'
         run: |
           git submodule update --remote --recursive
+      - name: Deploy 🚀
+        if: github.event.action == 'ack'
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: . # The folder the action should deploy.
+
