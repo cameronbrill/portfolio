@@ -1,0 +1,38 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: heading
+  label: Content
+- type: directory
+  path: src/assets/content/blog
+  label: Blog Posts
+  create: documents
+  match: "**/*"
+  templates:
+  - blog-post
+- type: document
+  path: src/assets/content/data/authors.json
+  label: Authors List
+- type: document
+  path: src/assets/content/data/info.json
+  label: Info Page
+- type: heading
+  label: Config
+- type: document
+  path: src/assets/content/data/config.json
+  label: Site Config
+upload_dir: src/assets/content/images
+public_path: "/src/assets/content/images"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_output_directory: src
+  install_dependencies_command: yarn install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: yarn forestry-preview
