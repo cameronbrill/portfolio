@@ -1,129 +1,349 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Poppins';
-            font-size: 22px;
-        }
+      body {
+        font-family: "Poppins";
+        font-size: 22px;
+      }
 
-        .content {
-            height: 200px;
-            position: absolute;
-            /*Can also be `fixed`*/
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            padding-bottom: 5%;
-            margin: auto;
-            /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
-            max-width: 100%;
-            max-height: 100%;
-            overflow: auto;
-        }
+      .content {
+        height: 200px;
+        position: absolute;
+        /*Can also be `fixed`*/
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding-bottom: 5%;
+        margin: auto;
+        /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
+        max-width: 100%;
+        max-height: 100%;
+        overflow: auto;
+      }
 
-        .name {
-            font-weight: 600;
-            font-size: 70px;
-            text-align: center;
-        }
+      .name {
+        font-weight: 600;
+        font-size: 70px;
+        text-align: center;
+      }
 
-        .title {
-            font-weight: 200;
-            font-size: 20px;
-            text-align: center;
-            padding-bottom: 32px;
-        }
+      .title {
+        font-weight: 200;
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 32px;
+      }
 
-        .element {
-            text-align: center;
-            display: inline-block;
-            padding: 4px;
-            padding-right: 6px;
-            padding-left: 6px;
-            color: black;
-            font-size: 25px;
-        }
+      .element {
+        text-align: center;
+        display: inline-block;
+        padding: 4px;
+        padding-right: 6px;
+        padding-left: 6px;
+        color: black;
+        font-size: 25px;
+      }
 
-        .links {
-            justify-content: center;
-            margin: 0 auto;
-            position: relative;
-            width: max-content;
-        }
+      .links {
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+        width: max-content;
+      }
 
-        a:hover {
-            transform: scale(1.1);
-            -webkit-transform: scale(1.1);
-        }
+      a:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+      }
     </style>
     <!-- Google Tag Manager -->
     <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PDFHZPK');
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PDFHZPK");
     </script>
     <!-- End Google Tag Manager -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179305478-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-179305478-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-179305478-1', {
-            'allowAnchor': true
-        });
-        ga('send', 'pageview', {
-            'page': location.pathname + location.search + location.hash
-        });
+      gtag("config", "UA-179305478-1", {
+        allowAnchor: true,
+      });
+      ga("send", "pageview", {
+        page: location.pathname + location.search + location.hash,
+      });
     </script>
     <!-- End Google Analytics Global site Tag -->
-</head>
+    <script>
+      !(function(t, n) {
+        "object" == typeof exports && "object" == typeof module
+          ? (module.exports = n())
+          : "function" == typeof define && define.amd
+          ? define([], n)
+          : "object" == typeof exports
+          ? (exports.highlightLib = n())
+          : (t.highlightLib = n());
+      })(this, function() {
+        return (function(t) {
+          var n = {};
+          function e(i) {
+            if (n[i]) return n[i].exports;
+            var r = (n[i] = { i: i, l: !1, exports: {} });
+            return t[i].call(r.exports, r, r.exports, e), (r.l = !0), r.exports;
+          }
+          return (
+            (e.m = t),
+            (e.c = n),
+            (e.d = function(t, n, i) {
+              e.o(t, n) ||
+                Object.defineProperty(t, n, { enumerable: !0, get: i });
+            }),
+            (e.r = function(t) {
+              "undefined" != typeof Symbol &&
+                Symbol.toStringTag &&
+                Object.defineProperty(t, Symbol.toStringTag, {
+                  value: "Module",
+                }),
+                Object.defineProperty(t, "__esModule", { value: !0 });
+            }),
+            (e.t = function(t, n) {
+              if ((1 & n && (t = e(t)), 8 & n)) return t;
+              if (4 & n && "object" == typeof t && t && t.__esModule) return t;
+              var i = Object.create(null);
+              if (
+                (e.r(i),
+                Object.defineProperty(i, "default", {
+                  enumerable: !0,
+                  value: t,
+                }),
+                2 & n && "string" != typeof t)
+              )
+                for (var r in t)
+                  e.d(
+                    i,
+                    r,
+                    function(n) {
+                      return t[n];
+                    }.bind(null, r)
+                  );
+              return i;
+            }),
+            (e.n = function(t) {
+              var n =
+                t && t.__esModule
+                  ? function() {
+                      return t.default;
+                    }
+                  : function() {
+                      return t;
+                    };
+              return e.d(n, "a", n), n;
+            }),
+            (e.o = function(t, n) {
+              return Object.prototype.hasOwnProperty.call(t, n);
+            }),
+            (e.p = ""),
+            e((e.s = 0))
+          );
+        })([
+          function(t, n, e) {
+            "use strict";
+            e.r(n),
+              e.d(n, "H", function() {
+                return l;
+              });
+            var i,
+              r,
+              o = function() {
+                return (o =
+                  Object.assign ||
+                  function(t) {
+                    for (var n, e = 1, i = arguments.length; e < i; e++)
+                      for (var r in (n = arguments[e]))
+                        Object.prototype.hasOwnProperty.call(n, r) &&
+                          (t[r] = n[r]);
+                    return t;
+                  }).apply(this, arguments);
+              },
+              a = function(t, n) {
+                console.warn("Highlight Warning: (" + t + "): ", n);
+              },
+              l = {
+                options: void 0,
+                init: function(t, n) {
+                  try {
+                    (l.options = n), (i = document.createElement("script"));
+                    var e = (null == n
+                    ? void 0
+                    : n.scriptUrl)
+                      ? n.scriptUrl
+                      : "https://static.highlight.run/index.js";
+                    i.setAttribute(
+                      "src",
+                      e + "?" + new Date().getMilliseconds()
+                    ),
+                      i.setAttribute("type", "text/javascript"),
+                      document.getElementsByTagName("head")[0].appendChild(i),
+                      i.addEventListener("load", function() {
+                        (r = new window.Highlight({
+                          organizationID: t,
+                          debug: null == n ? void 0 : n.debug,
+                          backendUrl: null == n ? void 0 : n.backendUrl,
+                          disableNetworkRecording:
+                            null == n ? void 0 : n.disableNetworkRecording,
+                          disableConsoleRecording:
+                            null == n ? void 0 : n.disableConsoleRecording,
+                          enableSegmentIntegration:
+                            null == n ? void 0 : n.enableSegmentIntegration,
+                        })),
+                          (null == n ? void 0 : n.manualStart) ||
+                            r.initialize(t);
+                      });
+                  } catch (t) {
+                    a("init", t);
+                  }
+                },
+                track: function(t, n) {
+                  try {
+                    l.onHighlightReady(function() {
+                      return r.addProperties(o(o({}, n), { event: t }));
+                    });
+                  } catch (t) {
+                    a("track", t);
+                  }
+                },
+                start: function() {
+                  var t;
+                  try {
+                    if (
+                      null === (t = l.options) || void 0 === t
+                        ? void 0
+                        : t.manualStart
+                    )
+                      var n = setInterval(function() {
+                        r && (clearInterval(n), r.initialize());
+                      }, 200);
+                    else
+                      console.warn(
+                        "Highlight Error: Can't call `start()` without setting `manualStart` option in `H.init`"
+                      );
+                  } catch (t) {
+                    a("start", t);
+                  }
+                },
+                identify: function(t, n) {
+                  try {
+                    l.onHighlightReady(function() {
+                      return r.identify(t, n);
+                    });
+                  } catch (t) {
+                    a("identify", t);
+                  }
+                },
+                getSessionURL: function() {
+                  return new Promise(function(t, n) {
+                    l.onHighlightReady(function() {
+                      var e = r.organizationID,
+                        i = r.sessionID;
+                      e && i
+                        ? t("app.highlight.run/" + e + "/sessions/" + i)
+                        : n(new Error("org ID or session ID is empty"));
+                    });
+                  });
+                },
+                onHighlightReady: function(t) {
+                  try {
+                    r && r.ready && t();
+                    var n = setInterval(function() {
+                      r && r.ready && (clearInterval(n), t());
+                    }, 200);
+                  } catch (t) {
+                    a("onHighlightReady", t);
+                  }
+                },
+              };
+            "undefined" != typeof window && (window.H = l);
+          },
+        ]);
+      }); //# sourceMappingURL=index.js.map
+      window.H.init("1jdk33e5");
+    </script>
+  </head>
 
-<body>
+  <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDFHZPK" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PDFHZPK"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="content">
-        <div class="name">cameron brill</div>
-        <div class="title">software engineer and self-proclaimed home chef</div>
-        <div class="links">
-            <a class="element" target="_blank" href="/resume">resume</a>
-            <a class="element" target="_blank" href="https://www.github.com/cameronbrill">github</a>
-            <a class="element" target="_blank" href="https://www.devpost.com/cameronbrill">devpost</a>
-            <a class="element" target="_blank" href="https://www.linkedin.com/in/cameronbrill">linkedin</a>
-        </div>
+      <div class="name">cameron brill</div>
+      <div class="title">software engineer and self-proclaimed home chef</div>
+      <div class="links">
+        <a class="element" target="_blank" href="/resume">resume</a>
+        <a
+          class="element"
+          target="_blank"
+          href="https://www.github.com/cameronbrill"
+          >github</a
+        >
+        <a
+          class="element"
+          target="_blank"
+          href="https://www.devpost.com/cameronbrill"
+          >devpost</a
+        >
+        <a
+          class="element"
+          target="_blank"
+          href="https://www.linkedin.com/in/cameronbrill"
+          >linkedin</a
+        >
+      </div>
     </div>
-</body>
+  </body>
 
-<footer>
+  <footer>
     <script type="text/javascript">
-        jQuery(document).ready(function () {
-            jQuery('.menu a').click(function () {
-                var match = jQuery(this).attr('href').match(/#\S+/);
-                ga('send', 'pageview', location.pathname + match[0]);
-            });
+      jQuery(document).ready(function() {
+        jQuery(".menu a").click(function() {
+          var match = jQuery(this)
+            .attr("href")
+            .match(/#\S+/);
+          ga("send", "pageview", location.pathname + match[0]);
         });
+      });
     </script>
-</footer>
-
+  </footer>
 </html>
