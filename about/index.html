@@ -31,6 +31,8 @@
         font-weight: 600;
         font-size: 70px;
         text-align: center;
+        text-decoration: none;
+        color: black;
       }
 
       .title {
@@ -60,6 +62,29 @@
       a:hover {
         transform: scale(1.1);
         -webkit-transform: scale(1.1);
+      }
+
+      .board {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: center;
+      }
+
+      .col {
+        width: 30%;
+        margin: 0 auto;
+      }
+
+      .cell {
+        height: 50px;
+        width: 100%;
+        margin-bottom: 10px;
+        align-self: flex-start;
+        display: flex;
+        justify-content: center;
+        text-align: center;
       }
     </style>
     <!-- Google Tag Manager -->
@@ -305,11 +330,9 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="content">
-      <div class="name">cameron brill</div>
-      <div class="title">
-        software engineer, snowboarder, and self-proclaimed home chef
-      </div>
+    <div class="">
+      <div class="name"><a class="name" href="/">cameron brill</a></div>
+      <div class="title">software engineer and self-proclaimed home chef</div>
       <div class="links">
         <a class="element" target="_blank" href="/resume">resume</a>
         <a
@@ -332,6 +355,30 @@
         >
         <a class="element" href="/about">about</a>
         <a class="element" href="/certificates">certificates</a>
+      </div>
+      <div class="board">
+        <div class="col">
+          <div
+            class="cell"
+            style="
+              padding-top: 0.75rem;
+              font-size: xx-large;
+              font-weight: bolder;
+            "
+          >
+            About
+          </div>
+          <div class="cell">
+            I'm a backend developer teaching myself dApp dev. When I'm not
+            coding, you'll either find me shredding the gnar on my snowboard,
+            cruising through town on my longboard, beaming through airports on
+            my penny board, or traveling for food/mountaineering expeditions. I
+            have an affinity for learning languages, cuisines, and cultures, so
+            I often engulf myself into countries where I don't speak the
+            language. Currently, I'm living in South Korea, and am learning the
+            language, culture, and cuisine as I go.
+          </div>
+        </div>
       </div>
     </div>
   </body>
