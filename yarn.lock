@@ -1216,6 +1216,16 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@highlight-run/react@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@highlight-run/react/-/react-1.0.3.tgz#e1120d5302a76c4ba043bada3755b2f7e5354ff9"
+  integrity sha512-1xUD+RV3p2BMkWqMM2/FjcmhRV2BIWNsBJ0TiyWQVLkqCYnGs8G5UWZakpERAmFo5mCHh64fXxSY1qShyg/i4g==
+  dependencies:
+    "@types/node" "^12.0.0"
+    "@types/react" "^17.0.0"
+    "@types/react-dom" "^17.0.0"
+    typescript "^4.1.2"
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz"
@@ -5804,6 +5814,11 @@ hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/hex-color-regex/-/hex-color-regex-1.1.0.tgz"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
+
+highlight.run@^2.7.8:
+  version "2.7.8"
+  resolved "https://registry.yarnpkg.com/highlight.run/-/highlight.run-2.7.8.tgz#53847f7d2b45eca6d31e16a5b9b60ab933f9a285"
+  integrity sha512-PsVCEGqQ3gmoRHtlQnvrIdrX4CYMc6ceLficEi564fBEdd3SDqrpW/81Ds0eZY9hEY3uYB4ozQjr+E3CXunLPA==
 
 history@^4.9.0:
   version "4.10.1"
