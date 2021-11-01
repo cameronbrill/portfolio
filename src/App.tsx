@@ -16,6 +16,7 @@ import { NO_GROUP } from "kbar/lib/useMatches";
 import React, { useState } from "react";
 
 import styles from "./App.module.scss";
+import classNames from "classnames";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const RenderResults = () => {
@@ -57,21 +58,14 @@ const ResultItem = React.forwardRef(
     return (
       <div
         ref={ref}
-        style={{
-          padding: "12px 16px",
-          background: active ? "var(--a1)" : "var(--background)",
-          borderLeft: `2px solid ${
-            active ? "var(--foreground)" : "transparent"
-          }`,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          cursor: "pointer",
-        }}
+        className={classNames(
+          { [styles.resultItemActive]: active },
+          styles.resultItem
+        )}
       >
-        <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+        <div className={styles.resultItemIcon}>
           {action.icon && action.icon}
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div className={styles.resultItemIconSubtitle}>
             <span>{action.name}</span>
             {action.subtitle && (
               <span style={{ fontSize: 12 }}>{action.subtitle}</span>
@@ -79,18 +73,9 @@ const ResultItem = React.forwardRef(
           </div>
         </div>
         {action.shortcut?.length ? (
-          <div style={{ display: "grid", gridAutoFlow: "column", gap: "4px" }}>
+          <div className={styles.resultItemShortCut}>
             {action.shortcut.map((sc: any) => (
-              <kbd
-                key={sc}
-                style={{
-                  padding: "4px 6px",
-                  background: "rgba(0 0 0 / .1)",
-                  borderRadius: "4px",
-                }}
-              >
-                {sc}
-              </kbd>
+              <kbd key={sc}>{sc}</kbd>
             ))}
           </div>
         ) : null}

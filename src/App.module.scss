@@ -33,3 +33,41 @@
   display: flex;
   justify-content: center;
 }
+.resultItem {
+  padding: 12px 16px;
+  background: var(--background);
+  border-left: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &Active {
+    background: var(--a1) !important;
+    border-left: 2px solid var(--foreground) !important;
+  }
+
+  div {
+    display: flex;
+  }
+
+  &Icon {
+    gap: 8px;
+    align-items: center;
+    &Subtitle {
+      flex-direction: column;
+    }
+  }
+
+  &ShortCut {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 4px;
+
+    kbd {
+      padding: 4px 6px;
+      background: rgba(#000, 0.1);
+      border-radius: 4px;
+    }
+  }
+}
