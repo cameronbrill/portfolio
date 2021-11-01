@@ -150,8 +150,6 @@ const App = () => {
     },
   ];
 
-  console.log(`${process.env.PUBLIC_URL}/cameron_brill_resume.pdf`);
-
   return (
     <KBarProvider actions={actions}>
       <KBarPortal>
@@ -170,7 +168,6 @@ const App = () => {
           onLoadError={console.error}
           onSourceError={console.error}
           file={resume}
-          //file={`${window.location.protocol}//${window.location.hostname}/public/cameron_brill_resume.pdf`}
         />
       )}
       <div className={styles.text}>{getOs()}</div>
