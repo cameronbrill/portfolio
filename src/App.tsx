@@ -17,6 +17,9 @@ import React, { useState } from "react";
 
 import styles from "./App.module.scss";
 import classNames from "classnames";
+
+import resume from "./assets/cameron_brill_resume.pdf";
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const RenderResults = () => {
@@ -161,7 +164,11 @@ const App = () => {
         </KBarPositioner>
       </KBarPortal>
       {showResume && (
-        <Document file="https://cameronbrill.me/public/cameron_brill_resume.pdf" />
+        <Document
+          onLoadError={console.error}
+          onSourceError={console.error}
+          file={resume}
+        />
       )}
       <div className={styles.text}>{getOs()}</div>
     </KBarProvider>
