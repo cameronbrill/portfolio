@@ -1,0 +1,8 @@
+{
+  "short_name": "Cameron Brill",
+  "name": "Cameron Brill's Personal Website",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#264653"
+}
