@@ -10,8 +10,7 @@ import {
 } from "kbar";
 import { Document, pdfjs } from "react-pdf";
 
-import { useHistory } from "react-router-dom";
-
+import { H } from "highlight.run";
 import { NO_GROUP } from "kbar/lib/useMatches";
 import React, { useState } from "react";
 
@@ -95,7 +94,6 @@ const getOs = () => {
 };
 
 const App = () => {
-  const history = useHistory();
   const [showResume, setShowResume] = useState(false);
   const actions = [
     {
@@ -103,25 +101,34 @@ const App = () => {
       name: "Resume",
       shortcut: ["r"],
       keywords: "experience jobs",
-      perform: () => setShowResume(!showResume),
+      perform: () => {
+        setShowResume(!showResume);
+        H.track("kbar-selected-resume");
+      },
     },
     {
       id: "email",
       name: "Email",
       shortcut: ["e"],
       keywords: "contact",
-      perform: () => history.push("/contact"),
+      perform: () => {
+        /* just copy my email to clipboard */
+        navigator.clipboard.writeText("contact@cameronbrill.me");
+        H.track("kbar-selected-email");
+      },
     },
     {
       id: "snowboarding",
       name: "Snowboarding",
       shortcut: ["s"],
       keywords: "snow",
-      perform: () =>
+      perform: () => {
         window.open(
           "https://www.youtube.com/channel/UC12W_hVgvbhF0kEn3sf7ECA",
           "_blank"
-        ),
+        );
+        H.track("kbar-selected-snowboarding");
+      },
     },
     {
       id: "github",
@@ -129,7 +136,10 @@ const App = () => {
       shortcut: ["g"],
       keywords: "social professional",
       section: "Social Media",
-      perform: () => window.open("https://github.com/cameronbrill", "_blank"),
+      perform: () => {
+        window.open("https://github.com/cameronbrill", "_blank");
+        H.track("kbar-selected-github");
+      },
     },
     {
       id: "devpost",
@@ -137,7 +147,10 @@ const App = () => {
       shortcut: ["d"],
       keywords: "social professional",
       section: "Social Media",
-      perform: () => window.open("https://devpost.com/cameronbrill", "_blank"),
+      perform: () => {
+        window.open("https://devpost.com/cameronbrill", "_blank");
+        H.track("kbar-selected-devpost");
+      },
     },
     {
       id: "linkedin",
@@ -145,33 +158,44 @@ const App = () => {
       shortcut: ["l"],
       keywords: "social professional",
       section: "Social Media",
-      perform: () =>
-        window.open("https://www.linkedin.com/in/cameronbrill/", "_blank"),
+      perform: () => {
+        window.open("https://www.linkedin.com/in/cameronbrill/", "_blank");
+        H.track("kbar-selected-linkedin");
+      },
     },
   ];
 
   return (
-    <KBarProvider actions={actions}>
-      <KBarPortal>
-        <KBarPositioner>
-          <KBarAnimator className={styles.animator}>
-            <KBarSearch
-              className={styles.search}
-              placeholder="Type a command or search..."
-            />
-            <RenderResults />
-          </KBarAnimator>
-        </KBarPositioner>
-      </KBarPortal>
-      {showResume && (
-        <Document
-          onLoadError={console.error}
-          onSourceError={console.error}
-          file={resume}
-        />
-      )}
-      <div className={styles.text}>{getOs()}</div>
-    </KBarProvider>
+    <>
+      <KBarProvider actions={actions}>
+        <KBarPortal>
+          <KBarPositioner>
+            <KBarAnimator className={styles.animator}>
+              <KBarSearch
+                className={styles.search}
+                placeholder="Type a command or search..."
+              />
+              <RenderResults />
+            </KBarAnimator>
+          </KBarPositioner>
+        </KBarPortal>
+        {showResume && (
+          <Document
+            onLoadError={(e) => {
+              console.error(e);
+              setShowResume(false);
+            }}
+            onSourceError={(e) => {
+              console.error(e);
+              setShowResume(false);
+            }}
+            file={resume}
+          />
+        )}
+        <div className={styles.text}>{getOs()}</div>
+      </KBarProvider>
+      <div className={styles.name}>cameron brill</div>
+    </>
   );
 };
 

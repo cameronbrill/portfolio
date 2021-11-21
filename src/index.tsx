@@ -8,7 +8,7 @@ import { H } from "highlight.run";
 import { ErrorBoundary } from "@highlight-run/react";
 
 H.init(process.env.REACT_APP_HIGHLIGHT_PROJ_ID, {
-  environment: "production",
+  environment: process.env.NODE_ENV,
 });
 
 ReactDOM.render(
