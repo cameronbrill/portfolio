@@ -7223,10 +7223,10 @@ jsprim@^1.2.2:
     array-includes "^3.1.2"
     object.assign "^4.1.2"
 
-kbar@^0.1.0-beta.16:
-  version "0.1.0-beta.16"
-  resolved "https://registry.npmjs.org/kbar/-/kbar-0.1.0-beta.16.tgz"
-  integrity sha512-e/jOX5XZRoACgMMQylXdmOko2+2gvKNRC7H6xqZ/6qP9uJfPoh7Tg66RIzGlmms0OVcYkgMHy9Z0a66SNby3Ig==
+kbar@^0.1.0-beta.21:
+  version "0.1.0-beta.21"
+  resolved "https://registry.yarnpkg.com/kbar/-/kbar-0.1.0-beta.21.tgz#9035490635d43d3e6d459a18e73cf517bdf43a72"
+  integrity sha512-+UQ0tfiREfmGdtUIS5bqLGz5BwhYzvZ/d6k2uwGe/odyrIfs86Rh8VzlpD4e6feNpYDhFc+yp2lCMAp9FKO/qA==
   dependencies:
     "@reach/portal" "^0.16.0"
     fast-equals "^2.0.3"
