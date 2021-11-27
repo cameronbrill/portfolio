@@ -8,7 +8,7 @@ import {
   KBarSearch,
   useMatches,
 } from "kbar";
-import { Document, pdfjs } from "react-pdf";
+import { Document, Page, pdfjs } from "react-pdf";
 
 import { H } from "highlight.run";
 import { NO_GROUP } from "kbar/lib/useMatches";
@@ -17,7 +17,7 @@ import React, { useState } from "react";
 import styles from "./App.module.scss";
 import classNames from "classnames";
 
-import resume from "./assets/cameron_brill_resume.pdf";
+import { Modal } from "antd";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -94,7 +94,10 @@ const getOs = () => {
 };
 
 const App = () => {
-  const [showResume, setShowResume] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const onOk = () => setShowModal(false);
+  const onCancel = () => setShowModal(false);
+
   const actions = [
     {
       id: "resume",
@@ -102,7 +105,7 @@ const App = () => {
       shortcut: ["r"],
       keywords: "experience jobs",
       perform: () => {
-        setShowResume(!showResume);
+        setShowModal(true);
         H.track("kbar-selected-resume");
       },
     },
@@ -167,6 +170,25 @@ const App = () => {
 
   return (
     <>
+      <Modal
+        destroyOnClose
+        maskClosable
+        closable={false}
+        footer={null}
+        className={styles.modal}
+        visible={showModal}
+        onCancel={onCancel}
+        onOk={onOk}
+      >
+        <main className={styles.modalContent}>
+          <Document
+            file={`https://raw.githubusercontent.com/cameronbrill/portfolio/master/src/assets/cameron_brill_resume.pdf`}
+            className={styles.resume}
+          >
+            <Page pageNumber={1} />
+          </Document>
+        </main>
+      </Modal>
       <KBarProvider actions={actions}>
         <KBarPortal>
           <KBarPositioner>
@@ -179,19 +201,6 @@ const App = () => {
             </KBarAnimator>
           </KBarPositioner>
         </KBarPortal>
-        {showResume && (
-          <Document
-            onLoadError={(e) => {
-              console.error(e);
-              setShowResume(false);
-            }}
-            onSourceError={(e) => {
-              console.error(e);
-              setShowResume(false);
-            }}
-            file={resume}
-          />
-        )}
         <div className={styles.text}>{getOs()}</div>
       </KBarProvider>
       <div className={styles.name}>cameron brill</div>

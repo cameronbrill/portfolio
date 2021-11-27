@@ -28,6 +28,7 @@
 }
 
 .text {
+  position: sticky;
   height: 80vh;
   align-items: center;
   display: flex;
@@ -74,8 +75,37 @@
 }
 
 .name {
+  position: absolute;
   display: flex;
   height: 19.5vh;
   align-items: flex-end;
   margin-left: 0.5vw;
+}
+
+.empty {
+  opacity: 0;
+}
+
+.resume {
+  :global(.annotationLayer) {
+    max-width: 0 !important;
+    max-height: 0 !important;
+  }
+}
+
+.modal {
+  position: absolute;
+  left: 0;
+  top: 5vh;
+  width: 100vw !important;
+  text-align: -webkit-center;
+
+  canvas {
+    box-shadow: 0 0 12px var(--foreground) !important;
+    border-radius: 12px !important;
+  }
+}
+
+.modalContent {
+  overflow: visible;
 }
