@@ -182,7 +182,7 @@ const App = () => {
       >
         <main className={styles.modalContent}>
           <Document
-            file={`https://raw.githubusercontent.com/cameronbrill/portfolio/master/src/assets/cameron_brill_resume.pdf`}
+            file={`https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf`}
             className={styles.resume}
           >
             <Page pageNumber={1} />
