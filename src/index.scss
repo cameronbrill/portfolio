@@ -42,6 +42,12 @@ code {
   --shadow: rgb(0 0 0 / 50%) 0px 16px 70px;
   --background: var(--color-charcoal);
   --foreground: var(--color-some-color);
+  --size-xSmall: 2px;
+  --size-small: 4px;
+  --size-medium: 6px;
+  --size-large: 8px;
+  --size-xLarge: 12px;
+  --size-xxLarge: 16px;
 }
 
 html {

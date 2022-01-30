@@ -184,9 +184,9 @@ const App = () => {
     },
   ];
 
-  const [numPages, setNumPages] = useState(null);
-  const onDocumentLoadSuccess = ({ numPages: nextNumPages }) => {
-    setNumPages(nextNumPages);
+  const [numPages, setNumPages] = useState<number>(0);
+  const onDocumentLoadSuccess = (pdf: { numPages: number }) => {
+    setNumPages(pdf.numPages);
   };
 
   return (
