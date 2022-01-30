@@ -17,7 +17,7 @@ import React, { useState } from "react";
 import styles from "./App.module.scss";
 import classNames from "classnames";
 
-import { Modal } from "antd";
+import { message, Modal } from "antd";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -117,7 +117,23 @@ const App = () => {
       perform: () => {
         /* just copy my email to clipboard */
         navigator.clipboard.writeText("contact@cameronbrill.me");
+        message.success({
+          content: "copied email to clipboard",
+          duration: 3,
+          style: {
+            key: "key",
+            top: 0,
+            paddingTop: "3vh",
+            position: "absolute",
+            width: "100vw",
+            textAlign: "-webkit-center",
+          },
+        });
         H.track("kbar-selected-email");
+        setTimeout(() => {
+          //Start the timer
+          message.destroy("key");
+        }, 3000);
       },
     },
     {
@@ -168,6 +184,11 @@ const App = () => {
     },
   ];
 
+  const [numPages, setNumPages] = useState(null);
+  const onDocumentLoadSuccess = ({ numPages: nextNumPages }) => {
+    setNumPages(nextNumPages);
+  };
+
   return (
     <>
       <Modal
@@ -184,8 +205,11 @@ const App = () => {
           <Document
             file={`https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf`}
             className={styles.resume}
+            onLoadSuccess={onDocumentLoadSuccess}
           >
-            <Page pageNumber={1} />
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+            ))}
           </Document>
         </main>
       </Modal>
