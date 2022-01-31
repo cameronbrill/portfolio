@@ -12,12 +12,14 @@ import { Document, Page, pdfjs } from "react-pdf";
 
 import { H } from "highlight.run";
 import { NO_GROUP } from "kbar/lib/useMatches";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import styles from "./App.module.scss";
 import classNames from "classnames";
 
-import { message, Modal } from "antd";
+import { Modal } from "antd";
+import "notyf/notyf.min.css";
+import NotyfContext from "./NotyfContext";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -97,6 +99,7 @@ const App = () => {
   const [showModal, setShowModal] = useState(false);
   const onOk = () => setShowModal(false);
   const onCancel = () => setShowModal(false);
+  const notyf = useContext(NotyfContext);
 
   const actions = [
     {
@@ -117,23 +120,8 @@ const App = () => {
       perform: () => {
         /* just copy my email to clipboard */
         navigator.clipboard.writeText("contact@cameronbrill.me");
-        message.success({
-          content: "copied email to clipboard",
-          duration: 3,
-          style: {
-            key: "key",
-            top: 0,
-            paddingTop: "3vh",
-            position: "absolute",
-            width: "100vw",
-            textAlign: "-webkit-center",
-          },
-        });
+        notyf.success("copied email to clipboard");
         H.track("kbar-selected-email");
-        setTimeout(() => {
-          //Start the timer
-          message.destroy("key");
-        }, 3000);
       },
     },
     {

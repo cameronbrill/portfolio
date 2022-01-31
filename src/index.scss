@@ -30,13 +30,16 @@ code {
 
 :root {
   height: auto;
+  --color-light-olive: #98e523;
   --color-charcoal: #264653;
   --color-charcoal2: #213e4a;
   --color-some-color: #3be3ce;
   --color-persian-green: #2a9d8f;
+  --color-forest-green: #50be6e;
   --color-orange-yellow-crayola: #e9c46a;
   --color-sandy-brown: #f4a261;
   --color-burnt-sienna: #e76f51;
+  --color-notification: var(--color-forest-green);
   --a1: var(--color-charcoal2);
   --a2: var(--color-burnt-sienna);
   --shadow: rgb(0 0 0 / 50%) 0px 16px 70px;
