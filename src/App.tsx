@@ -168,47 +168,55 @@ const App = () => {
   };
 
   return (
-    <>
-      <Modal
-        destroyOnClose
-        maskClosable
-        closable={false}
-        footer={null}
-        className={styles.modal}
-        visible={showModal}
-        onCancel={closeModal}
-        onOk={closeModal}
-      >
-        <main className={styles.modalContent}>
-          <Document
-            file={`https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf`}
-            className={styles.resume}
-            onLoadSuccess={onDocumentLoadSuccess}
-          >
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-            ))}
-          </Document>
-        </main>
-      </Modal>
+    <div className={styles.container} onClick={closeModal}>
+      {showModal && (
+        <Modal
+          closable={false}
+          footer={null}
+          className={styles.modal}
+          visible={showModal}
+        >
+          <main className={styles.modalContent}>
+            <Document
+              file={`https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf`}
+              className={styles.resume}
+              onLoadSuccess={onDocumentLoadSuccess}
+            >
+              {Array.from(new Array(numPages), (el, index) => (
+                <Page
+                  key={`page_${index + 1}`}
+                  pageNumber={index + 1}
+                  onClick={(e: { stopPropagation: () => any }) =>
+                    e.stopPropagation()
+                  }
+                />
+              ))}
+            </Document>
+          </main>
+        </Modal>
+      )}
       <KBarProvider actions={actions}>
         <KBarPortal>
-          <KBarPositioner
-            style={{ padding: "0 !important", paddingTop: "14vh" }}
+          <div
+            onClick={(e: { stopPropagation: () => any }) => e.stopPropagation()}
           >
-            <KBarAnimator className={styles.animator}>
-              <KBarSearch
-                className={styles.search}
-                placeholder="Type a command or search..."
-              />
-              <RenderResults />
-            </KBarAnimator>
-          </KBarPositioner>
+            <KBarPositioner
+              style={{ padding: "0 !important", paddingTop: "14vh" }}
+            >
+              <KBarAnimator className={styles.animator}>
+                <KBarSearch
+                  className={styles.search}
+                  placeholder="Type a command or search..."
+                />
+                <RenderResults />
+              </KBarAnimator>
+            </KBarPositioner>
+          </div>
         </KBarPortal>
         <div className={styles.text}>{getOs()}</div>
       </KBarProvider>
       <div className={styles.name}>cameron brill</div>
-    </>
+    </div>
   );
 };
 
