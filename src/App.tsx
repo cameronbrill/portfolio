@@ -88,8 +88,7 @@ const getOs = () => {
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
-  const onOk = () => setShowModal(false);
-  const onCancel = () => setShowModal(false);
+  const closeModal = () => setShowModal(false);
   const notyf = useContext(NotyfContext);
 
   const actions = [
@@ -177,8 +176,8 @@ const App = () => {
         footer={null}
         className={styles.modal}
         visible={showModal}
-        onCancel={onCancel}
-        onOk={onOk}
+        onCancel={closeModal}
+        onOk={closeModal}
       >
         <main className={styles.modalContent}>
           <Document
