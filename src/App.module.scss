@@ -87,6 +87,8 @@
 }
 
 .resume {
+  margin-top: var(--size-medium) !important;
+  margin-bottom: var(--size-medium) !important;
   display: flex;
   justify-content: center;
   :global(.annotationLayer) {
@@ -100,7 +102,6 @@
   left: 0;
   top: 5vh;
   width: 100vw !important;
-  text-align: -webkit-center;
 
   canvas {
     box-shadow: 0 0 var(--size-medium) var(--foreground) !important;
@@ -109,5 +110,5 @@
 }
 
 .modalContent {
-  overflow: visible;
+  overflow: hidden;
 }
