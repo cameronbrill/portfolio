@@ -1,4 +1,5 @@
 export const animator: string;
+export const container: string;
 export const empty: string;
 export const groupName: string;
 export const modal: string;

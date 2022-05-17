@@ -25,19 +25,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const RenderResults = () => {
   const groups = useMatches();
-  const flattened = React.useMemo(
-    () =>
-      groups.reduce((acc: any[], curr) => {
-        acc.push(curr.name);
-        acc.push(...curr.actions);
-        return acc;
-      }, []),
-    [groups]
-  );
 
   return (
     <KBarResults
-      items={flattened.filter((i) => i !== NO_GROUP)}
+      items={groups.results.filter((i) => i !== NO_GROUP)}
       onRender={({ item, active }) =>
         typeof item === "string" ? (
           <div className={styles.groupName}>{item}</div>
@@ -97,8 +88,7 @@ const getOs = () => {
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
-  const onOk = () => setShowModal(false);
-  const onCancel = () => setShowModal(false);
+  const closeModal = () => setShowModal(false);
   const notyf = useContext(NotyfContext);
 
   const actions = [
@@ -172,51 +162,53 @@ const App = () => {
     },
   ];
 
-  const [numPages, setNumPages] = useState<number>(0);
-  const onDocumentLoadSuccess = (pdf: { numPages: number }) => {
-    setNumPages(pdf.numPages);
-  };
-
   return (
-    <>
-      <Modal
-        destroyOnClose
-        maskClosable
-        closable={false}
-        footer={null}
-        className={styles.modal}
-        visible={showModal}
-        onCancel={onCancel}
-        onOk={onOk}
-      >
-        <main className={styles.modalContent}>
-          <Document
-            file={`https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf`}
-            className={styles.resume}
-            onLoadSuccess={onDocumentLoadSuccess}
-          >
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-            ))}
-          </Document>
-        </main>
-      </Modal>
+    <div className={styles.container} onClick={closeModal}>
+      {showModal && (
+        <Modal
+          closable={false}
+          footer={null}
+          className={styles.modal}
+          visible={showModal}
+        >
+          <main className={styles.modalContent}>
+            <Document
+              file={`https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf`}
+              className={styles.resume}
+            >
+              <Page
+                key={`resume_page_1`}
+                pageNumber={1}
+                onClick={(e: { stopPropagation: () => any }) =>
+                  e.stopPropagation()
+                }
+              />
+            </Document>
+          </main>
+        </Modal>
+      )}
       <KBarProvider actions={actions}>
         <KBarPortal>
-          <KBarPositioner>
-            <KBarAnimator className={styles.animator}>
-              <KBarSearch
-                className={styles.search}
-                placeholder="Type a command or search..."
-              />
-              <RenderResults />
-            </KBarAnimator>
-          </KBarPositioner>
+          <div
+            onClick={(e: { stopPropagation: () => any }) => e.stopPropagation()}
+          >
+            <KBarPositioner
+              style={{ padding: "0 !important", paddingTop: "14vh" }}
+            >
+              <KBarAnimator className={styles.animator}>
+                <KBarSearch
+                  className={styles.search}
+                  placeholder="Type a command or search..."
+                />
+                <RenderResults />
+              </KBarAnimator>
+            </KBarPositioner>
+          </div>
         </KBarPortal>
         <div className={styles.text}>{getOs()}</div>
       </KBarProvider>
       <div className={styles.name}>cameron brill</div>
-    </>
+    </div>
   );
 };
 
