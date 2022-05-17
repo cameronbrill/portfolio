@@ -162,11 +162,6 @@ const App = () => {
     },
   ];
 
-  const [numPages, setNumPages] = useState<number>(0);
-  const onDocumentLoadSuccess = (pdf: { numPages: number }) => {
-    setNumPages(pdf.numPages);
-  };
-
   return (
     <div className={styles.container} onClick={closeModal}>
       {showModal && (
@@ -180,17 +175,14 @@ const App = () => {
             <Document
               file={`https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf`}
               className={styles.resume}
-              onLoadSuccess={onDocumentLoadSuccess}
             >
-              {Array.from(new Array(numPages), (el, index) => (
-                <Page
-                  key={`page_${index + 1}`}
-                  pageNumber={index + 1}
-                  onClick={(e: { stopPropagation: () => any }) =>
-                    e.stopPropagation()
-                  }
-                />
-              ))}
+              <Page
+                key={`resume_page_1`}
+                pageNumber={1}
+                onClick={(e: { stopPropagation: () => any }) =>
+                  e.stopPropagation()
+                }
+              />
             </Document>
           </main>
         </Modal>
