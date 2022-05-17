@@ -5,7 +5,6 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.scss";
 import { BrowserRouter as Router } from "react-router-dom";
 import { H } from "highlight.run";
-import { ErrorBoundary } from "@highlight-run/react";
 
 H.init(process.env.REACT_APP_HIGHLIGHT_PROJ_ID, {
   environment: process.env.NODE_ENV,
@@ -14,9 +13,7 @@ H.init(process.env.REACT_APP_HIGHLIGHT_PROJ_ID, {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <ErrorBoundary>
-        <App />
-      </ErrorBoundary>
+      <App />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
