@@ -3,20 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@highlight-run/react": "^1.0.3",
+    "@highlight-run/react": "^1.1.6",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.0",
-    "@yarnpkg/pnpify": "^3.1.1-rc.13",
+    "@types/node": "^17.0.0",
+    "@types/react": "^18.0",
+    "@types/react-dom": "^18.0",
     "antd": "^4",
     "classnames": "^2.3.1",
-    "highlight.run": "^2.7.8",
+    "highlight.run": "^4.2.5",
     "kbar": "^0.1.0-beta.21",
-    "node-sass": "^5.0.0",
     "notyf": "^3.10.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -29,7 +27,7 @@
   "scripts": {
     "s": "concurrently 'yarn start' 'yarn styles'",
     "start": "react-scripts start",
-    "styles": "tsm src -w",
+    "styles": "yarn typed-scss-modules src -w",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -50,9 +48,9 @@
     "@types/react-pdf": "^5.0.9",
     "@types/react-router-dom": "^5.3.2",
     "concurrently": "^6.3.0",
-    "eslint": "^8.0.0",
     "eslint-config-react-app": "^7.0.0",
-    "typed-scss-modules": "^4.1.1"
+    "sass": "^1.51.0",
+    "typed-scss-modules": "^6"
   },
   "packageManager": "yarn@3.1.1"
 }
