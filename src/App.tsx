@@ -25,19 +25,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const RenderResults = () => {
   const groups = useMatches();
-  const flattened = React.useMemo(
-    () =>
-      groups.reduce((acc: any[], curr) => {
-        acc.push(curr.name);
-        acc.push(...curr.actions);
-        return acc;
-      }, []),
-    [groups]
-  );
 
   return (
     <KBarResults
-      items={flattened.filter((i) => i !== NO_GROUP)}
+      items={groups.results.filter((i) => i !== NO_GROUP)}
       onRender={({ item, active }) =>
         typeof item === "string" ? (
           <div className={styles.groupName}>{item}</div>
