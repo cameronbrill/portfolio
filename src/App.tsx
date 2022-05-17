@@ -194,7 +194,9 @@ const App = () => {
       </Modal>
       <KBarProvider actions={actions}>
         <KBarPortal>
-          <KBarPositioner>
+          <KBarPositioner
+            style={{ padding: "0 !important", paddingTop: "14vh" }}
+          >
             <KBarAnimator className={styles.animator}>
               <KBarSearch
                 className={styles.search}
