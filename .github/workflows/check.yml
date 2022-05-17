@@ -1,0 +1,12 @@
+name: code check
+
+on: [pull_request]
+
+jobs:
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check Dependencies
+        uses: theahura/depcheck-action@main
