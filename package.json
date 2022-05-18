@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.4.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@types/react": "^18.0",
@@ -21,11 +22,11 @@
   },
   "scripts": {
     "s": "concurrently 'yarn start' 'yarn styles'",
-    "start": "react-scripts start",
+    "start": "craco start",
     "styles": "yarn typed-scss-modules src -w",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject"
   },
   "browserslist": {
     "production": [
