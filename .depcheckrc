@@ -1,1 +1,1 @@
-ignores: ["react-scripts", "typescript", "concurrently", "sass", "typed-scss-modules"]
+ignores: ["react-scripts", "typescript", "concurrently", "sass", "typed-scss-modules", "@craco/craco"]
