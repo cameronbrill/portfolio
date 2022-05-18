@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Resume, Mask } from "@Components/Resume/Resume";
 import { H } from "highlight.run";
 import {
@@ -8,7 +9,7 @@ import {
   KBarSearch,
 } from "kbar";
 import { Notyf } from "notyf";
-import { useState } from "react";
+import "notyf/notyf.min.css";
 
 import styles from "./KBar.module.scss";
 import RenderResults from "./Results/Results";
