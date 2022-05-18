@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./home.module.scss";
 import KBar from "@Components/KBar/KBar";
 import { getOs } from "@Utils/Utils";

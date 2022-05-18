@@ -1,6 +1,6 @@
+import React from "react";
 import classNames from "classnames";
 import { Action, KBarResults, NO_GROUP, useMatches } from "kbar";
-import React from "react";
 import styles from "./Results.module.scss";
 
 const ResultItem = React.forwardRef(
