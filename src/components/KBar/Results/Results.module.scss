@@ -1,0 +1,46 @@
+.groupName {
+  padding: var(--size-large) var(--size-xxLarge);
+  font-size: 10px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  background: var(--background);
+}
+
+.resultItem {
+  padding: var(--size-xLarge) var(--size-xxLarge);
+  background: var(--background);
+  border-left: var(--size-xSmall) solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &Active {
+    background: var(--a1) !important;
+    border-left: var(--size-xSmall) solid var(--foreground) !important;
+  }
+
+  div {
+    display: flex;
+  }
+
+  &Icon {
+    gap: var(--size-large);
+    align-items: center;
+    &Subtitle {
+      flex-direction: column;
+    }
+  }
+
+  &ShortCut {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--size-small);
+
+    kbd {
+      padding: var(--size-small) var(--size-medium);
+      background: rgba(#000, 0.1);
+      border-radius: var(--size-small);
+    }
+  }
+}

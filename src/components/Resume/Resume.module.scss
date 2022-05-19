@@ -1,0 +1,35 @@
+.modal {
+  position: absolute;
+  left: 0;
+  top: 5vh;
+  width: 100vw !important;
+
+  canvas {
+    box-shadow: 0 0 var(--size-medium) var(--foreground) !important;
+    border-radius: var(--size-medium) !important;
+  }
+  z-index: 2147483641;
+}
+
+.modalContent {
+  overflow: hidden;
+}
+
+.document {
+  margin-top: var(--size-medium) !important;
+  margin-bottom: var(--size-medium) !important;
+  display: flex;
+  justify-content: center;
+  :global(.annotationLayer) {
+    max-width: 0 !important;
+    max-height: 0 !important;
+  }
+}
+
+.mask {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2147483640;
+  background: rgba(#1c343e, calc(var(--golden-number) / 20));
+}

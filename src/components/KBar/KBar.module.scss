@@ -1,0 +1,22 @@
+.search {
+  padding: var(--size-xLarge);
+  font-size: var(--size-xxLarge);
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.animator {
+  position: absolute;
+  z-index: 2147483647;
+  max-width: 600px;
+  width: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  border-radius: var(--size-large);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
