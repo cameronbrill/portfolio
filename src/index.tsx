@@ -8,6 +8,7 @@ import LogRocket from "logrocket";
 
 H.init(process.env.REACT_APP_HIGHLIGHT_PROJ_ID, {
   environment: process.env.NODE_ENV,
+  enableCanvasRecording: true,
 });
 LogRocket.init(`${process.env.REACT_APP_LOG_ROCKET_PROJ_ID}`);
 
