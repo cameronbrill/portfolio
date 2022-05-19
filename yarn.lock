@@ -8771,6 +8771,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"logrocket@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "logrocket@npm:3.0.0"
+  checksum: 4fa83785ffe673434868c5a9fdeff3e238f3290e83a8a6ff54be9b34e5a301ddc73fbbf6cf628b714c8198c1bf96f943e4141bd59e738c2952ab5bce21accf9c
+  languageName: node
+  linkType: hard
+
 "loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
@@ -9835,6 +9842,7 @@ __metadata:
     eslint-config-react-app: ^7.0.0
     highlight.run: ^4.2.5
     kbar: ^0.1.0-beta.21
+    logrocket: ^3.0.0
     notyf: ^3.10.0
     react: ^18.1.0
     react-dom: ^18.1.0

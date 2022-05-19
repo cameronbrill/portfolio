@@ -11,6 +11,7 @@
     "classnames": "^2.3.1",
     "highlight.run": "^4.2.5",
     "kbar": "^0.1.0-beta.21",
+    "logrocket": "^3.0.0",
     "notyf": "^3.10.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
