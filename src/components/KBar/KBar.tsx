@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Resume, Mask } from "@Components/Resume/Resume";
 import { Calendar } from "@Components/Calendar/Calendar";
 import { H } from "highlight.run";
@@ -24,6 +24,18 @@ const KBar = ({ children }: KBarProps) => {
   const closeModal = () => setShowModal(false);
   const [showCalendar, setShowCalendar] = useState(false);
   const closeCalendar = () => setShowCalendar(false);
+
+  useEffect(() => {
+    function handleEscapeKey(event: KeyboardEvent) {
+      if (event.code === "Escape") {
+        closeModal();
+        closeCalendar();
+      }
+    }
+
+    document.addEventListener("keydown", handleEscapeKey);
+    return () => document.removeEventListener("keydown", handleEscapeKey);
+  }, []);
 
   const notifier = new Notyf({
     duration: 3500,
