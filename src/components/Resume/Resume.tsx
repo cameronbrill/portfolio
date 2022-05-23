@@ -3,16 +3,18 @@ import { Modal } from "antd";
 import { pdfjs, Document, Page } from "react-pdf";
 
 import styles from "./Resume.module.scss";
+import classNames from "classnames";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 interface MaskProps {
-  closeResume: () => void;
+  onClick: () => void;
   children?: React.ReactNode;
+  className?: string;
 }
-export const Mask = ({ closeResume, children }: MaskProps) => {
+export const Mask = ({ onClick, children, className }: MaskProps) => {
   return (
-    <div onClick={closeResume} className={styles.mask}>
+    <div onClick={onClick} className={classNames(styles.mask, className)}>
       {children}
     </div>
   );

@@ -109,7 +109,7 @@ const KBar = ({ children }: KBarProps) => {
   return (
     <>
       {showModal && (
-        <Mask closeResume={closeModal}>
+        <Mask onClick={closeModal}>
           <Resume visible={showModal} />
         </Mask>
       )}
