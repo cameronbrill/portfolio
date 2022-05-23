@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Resume, Mask } from "@Components/Resume/Resume";
+import { Calendar } from "@Components/Calendar/Calendar";
 import { H } from "highlight.run";
 import {
   KBarAnimator,
@@ -21,6 +22,8 @@ interface KBarProps {
 const KBar = ({ children }: KBarProps) => {
   const [showModal, setShowModal] = useState(false);
   const closeModal = () => setShowModal(false);
+  const [showCalendar, setShowCalendar] = useState(false);
+  const closeCalendar = () => setShowCalendar(false);
 
   const notifier = new Notyf({
     duration: 3500,
@@ -64,12 +67,22 @@ const KBar = ({ children }: KBarProps) => {
       name: "Snowboarding",
       shortcut: ["s"],
       keywords: "snow",
+      section: "Social Media",
       perform: () => {
         window.open(
           "https://www.youtube.com/channel/UC12W_hVgvbhF0kEn3sf7ECA",
           "_blank"
         );
         H.track("kbar-selected-snowboarding");
+      },
+    },
+    {
+      id: "calendly",
+      name: "Schedule a Meeting",
+      shortcut: ["c"],
+      keywords: "schedule",
+      perform: () => {
+        setShowCalendar(true);
       },
     },
     {
@@ -111,6 +124,11 @@ const KBar = ({ children }: KBarProps) => {
       {showModal && (
         <Mask onClick={closeModal}>
           <Resume visible={showModal} />
+        </Mask>
+      )}
+      {showCalendar && (
+        <Mask onClick={closeCalendar} className={styles.container}>
+          <Calendar />
         </Mask>
       )}
       <KBarProvider actions={actions}>
