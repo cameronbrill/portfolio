@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Home from "@Pages/home";
+import Home from "@Pages/Home/home";
 import "./index.scss";
 import { BrowserRouter as Router } from "react-router-dom";
 import { H } from "highlight.run";
