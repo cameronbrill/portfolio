@@ -5,6 +5,7 @@ import "./index.scss";
 import { BrowserRouter as Router } from "react-router-dom";
 import { H } from "highlight.run";
 import LogRocket from "logrocket";
+import KBar from "@Components/KBar/KBar";
 
 H.init(process.env.REACT_APP_HIGHLIGHT_PROJ_ID, {
   environment: process.env.NODE_ENV,
@@ -17,6 +18,7 @@ const root = createRoot(container!);
 root.render(
   <React.StrictMode>
     <Router>
+      <KBar />
       <Home />
     </Router>
   </React.StrictMode>
