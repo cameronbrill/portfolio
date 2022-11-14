@@ -1,11 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Home from "@Pages/Home/home";
 import "./index.scss";
 import { BrowserRouter as Router } from "react-router-dom";
 import { H } from "highlight.run";
 import LogRocket from "logrocket";
 import KBar from "@Components/KBar/KBar";
+import Layout from "@Components/layouts/Layout";
+import Home from "@Pages/Home/home";
 
 H.init(process.env.REACT_APP_HIGHLIGHT_PROJ_ID, {
   environment: process.env.NODE_ENV,
@@ -19,7 +20,9 @@ root.render(
   <React.StrictMode>
     <Router>
       <KBar />
-      <Home />
+      <Layout>
+        <Home />
+      </Layout>
     </Router>
   </React.StrictMode>
 );
