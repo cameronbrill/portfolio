@@ -2397,6 +2397,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pdftron/webviewer@npm:^8.10.0":
+  version: 8.10.0
+  resolution: "@pdftron/webviewer@npm:8.10.0"
+  checksum: c5ae3aaba7ec4708fafafc483844e682198c7574c804489cd213e0741308a3e6bfbe082ceed5e8fd0af6d4633c4dc7ccf30b6dea056533433497670ed00f4856
+  languageName: node
+  linkType: hard
+
 "@pmmmwh/react-refresh-webpack-plugin@npm:^0.5.3":
   version: 0.5.7
   resolution: "@pmmmwh/react-refresh-webpack-plugin@npm:0.5.7"
@@ -10767,6 +10774,7 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@craco/craco": ^6.4.3
+    "@pdftron/webviewer": ^8.10.0
     "@testing-library/jest-dom": ^5.11.4
     "@types/react": ^18.0
     "@types/react-dom": ^18.0

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.3",
+    "@pdftron/webviewer": "^8.10.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@types/react": "^18.0",
     "@types/react-dom": "^18.0",
@@ -26,6 +27,8 @@
     "s": "concurrently 'yarn start' 'yarn styles'",
     "start": "next",
     "styles": "yarn typed-scss-modules src -w",
+    "postinstall": "yarn download-webviewer",
+    "download-webviewer": "npx @pdftron/webviewer-downloader --webviewerLocation ./public/webviewer/lib",
     "build": "next build",
     "test": "craco test",
     "eject": "craco eject"

@@ -1,9 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Modal } from "antd";
 
 import styles from "./Resume.module.scss";
 import classNames from "classnames";
+import type WebViewer from "@pdftron/webviewer";
+import type { WebViewerInstance } from "@pdftron/webviewer";
 
 interface MaskProps {
   onClick: () => void;
@@ -24,20 +26,41 @@ interface ResumeProps {
 
 export const Resume = ({ visible }: ResumeProps) => {
   const { height, width } = useWindowSize();
-  const [renderHeight, setRenderHeight] = useState<number>(-1);
-  const [renderWidth, setRenderWidth] = useState<number>(-1);
+  //   const [renderHeight, setRenderHeight] = useState<number>(-1);
+  //   const [renderWidth, setRenderWidth] = useState<number>(-1);
+  //
+  //   useEffect(() => {
+  //     if (height && width) {
+  //       if (height / width > 11 / 8.5) {
+  //         setRenderHeight((width * 0.9 * 11) / 8.5);
+  //         setRenderWidth(width * 0.9);
+  //       } else {
+  //         setRenderHeight(height * 0.9);
+  //         setRenderWidth((height * 0.9 * 8.5) / 11);
+  //       }
+  //     }
+  //   }, [height, width, setRenderHeight, setRenderWidth]);
+  const viewer = useRef(null);
+  const [run, setRun] = useState(false);
 
   useEffect(() => {
-    if (height && width) {
-      if (height / width > 11 / 8.5) {
-        setRenderHeight((width * 0.9 * 11) / 8.5);
-        setRenderWidth(width * 0.9);
-      } else {
-        setRenderHeight(height * 0.9);
-        setRenderWidth((height * 0.9 * 8.5) / 11);
-      }
+    if (!run) {
+      setRun(true);
+      import("@pdftron/webviewer").then(() => {
+        WebViewer(
+          {
+            path: "/webviewer/lib",
+            initialDoc: "/cameron_brill_resume.pdf",
+          },
+          viewer.current
+        ).then((instance: WebViewerInstance) => {
+          const { docViewer } = instance;
+          docViewer;
+          // you can now call WebViewer APIs here...
+        });
+      });
     }
-  }, [height, width, setRenderHeight, setRenderWidth]);
+  }, [setRun, run]);
 
   return (
     <>
@@ -49,21 +72,11 @@ export const Resume = ({ visible }: ResumeProps) => {
           visible={visible}
         >
           <main className={styles.modalContent}>
-            {/*renderClientSideComponent && toRender*/}
-            <object
+            <div
+              ref={viewer}
+              style={{ height: "100vh" }}
               className={styles.document}
-              data="https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf"
-              type="application/pdf"
-            >
-              <iframe
-                title="resume"
-                style={{
-                  height: `${renderHeight}px`,
-                  width: `${renderWidth}px`,
-                }}
-                src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf&embedded=true"
-              />
-            </object>
+            />
           </main>
         </Modal>
       )}
