@@ -2397,13 +2397,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pdftron/webviewer@npm:^8.10.0":
-  version: 8.10.0
-  resolution: "@pdftron/webviewer@npm:8.10.0"
-  checksum: c5ae3aaba7ec4708fafafc483844e682198c7574c804489cd213e0741308a3e6bfbe082ceed5e8fd0af6d4633c4dc7ccf30b6dea056533433497670ed00f4856
-  languageName: node
-  linkType: hard
-
 "@pmmmwh/react-refresh-webpack-plugin@npm:^0.5.3":
   version: 0.5.7
   resolution: "@pmmmwh/react-refresh-webpack-plugin@npm:0.5.7"
@@ -10774,7 +10767,6 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@craco/craco": ^6.4.3
-    "@pdftron/webviewer": ^8.10.0
     "@testing-library/jest-dom": ^5.11.4
     "@types/react": ^18.0
     "@types/react-dom": ^18.0
@@ -10791,7 +10783,6 @@ __metadata:
     logrocket: ^3.0.0
     next: latest
     notyf: ^3.10.0
-    pspdfkit: ^2022.5.2
     react: latest
     react-dom: latest
     react-router-dom: ^6.4.1
@@ -11853,13 +11844,6 @@ __metadata:
   version: 1.9.0
   resolution: "psl@npm:1.9.0"
   checksum: 20c4277f640c93d393130673f392618e9a8044c6c7bf61c53917a0fddb4952790f5f362c6c730a9c32b124813e173733f9895add8d26f566ed0ea0654b2e711d
-  languageName: node
-  linkType: hard
-
-"pspdfkit@npm:^2022.5.2":
-  version: 2022.5.2
-  resolution: "pspdfkit@npm:2022.5.2"
-  checksum: 1b000ed933ac5af45148122676487ee7207724b3d14196efb603e49c6a627345813c9bb0498edf3f4c3a8a3d1613c3b249834a400f8b12b134ae562031dcb31a
   languageName: node
   linkType: hard
 
