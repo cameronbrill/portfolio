@@ -46,7 +46,7 @@ export const Resume = ({ visible }: ResumeProps) => {
           closable={false}
           footer={null}
           className={styles.modal}
-          visible={visible}
+          open={visible}
         >
           <main className={styles.modalContent}>
             <div style={{ height: "100vh" }} className={styles.document}>
