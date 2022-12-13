@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.4.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@types/react": "^18.0",
     "antd": "^4",
@@ -14,16 +13,13 @@
     "logrocket": "^3.0.0",
     "next": "latest",
     "notyf": "^3.10.0",
-    "react": "latest",
-    "react-scripts": "5.0.1"
+    "react": "latest"
   },
   "scripts": {
     "s": "concurrently 'yarn start' 'yarn styles'",
     "start": "next",
     "styles": "yarn typed-scss-modules src -w",
-    "build": "next build",
-    "test": "craco test",
-    "eject": "craco eject"
+    "build": "next build"
   },
   "browserslist": {
     "production": [
