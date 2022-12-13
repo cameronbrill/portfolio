@@ -71,3 +71,7 @@ a {
   text-decoration: underline;
   text-underline-position: under;
 }
+
+[data-nextjs-scroll-focus-boundary] {
+  display: contents;
+}
