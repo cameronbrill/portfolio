@@ -8,22 +8,25 @@
     "@types/react": "^18.0",
     "@types/react-dom": "^18.0",
     "antd": "^4",
+    "canvas": "^2.10.2",
     "classnames": "^2.3.1",
+    "eslint-config-next": "latest",
     "highlight.run": "^4.2.5",
+    "html-pdf": "^3.0.1",
     "kbar": "^0.1.0-beta.21",
     "logrocket": "^3.0.0",
+    "next": "latest",
     "notyf": "^3.10.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-pdf": "^5.7.0",
+    "react": "latest",
+    "react-dom": "latest",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1"
   },
   "scripts": {
     "s": "concurrently 'yarn start' 'yarn styles'",
-    "start": "craco start",
+    "start": "next",
     "styles": "yarn typed-scss-modules src -w",
-    "build": "craco build",
+    "build": "next build",
     "test": "craco test",
     "eject": "craco eject"
   },
@@ -40,7 +43,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react-pdf": "^5.0.9",
     "@types/react-router-dom": "^5.3.2",
     "concurrently": "^6.3.0",
     "eslint-config-react-app": "^7.0.0",

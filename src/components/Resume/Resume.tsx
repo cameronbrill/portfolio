@@ -1,11 +1,9 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { Modal } from "antd";
-import { pdfjs, Document, Page } from "react-pdf";
 
 import styles from "./Resume.module.scss";
 import classNames from "classnames";
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 interface MaskProps {
   onClick: () => void;
@@ -25,6 +23,22 @@ interface ResumeProps {
 }
 
 export const Resume = ({ visible }: ResumeProps) => {
+  const { height, width } = useWindowSize();
+  const [renderHeight, setRenderHeight] = useState<number>(-1);
+  const [renderWidth, setRenderWidth] = useState<number>(-1);
+
+  useEffect(() => {
+    if (height && width) {
+      if (height / width > 11 / 8.5) {
+        setRenderHeight((width * 0.9 * 11) / 8.5);
+        setRenderWidth(width * 0.9);
+      } else {
+        setRenderHeight(height * 0.9);
+        setRenderWidth((height * 0.9 * 8.5) / 11);
+      }
+    }
+  }, [height, width, setRenderHeight, setRenderWidth]);
+
   return (
     <>
       {visible && (
@@ -35,21 +49,55 @@ export const Resume = ({ visible }: ResumeProps) => {
           visible={visible}
         >
           <main className={styles.modalContent}>
-            <Document
-              file={`https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf`}
+            {/*renderClientSideComponent && toRender*/}
+            <object
               className={styles.document}
+              data="https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf"
+              type="application/pdf"
             >
-              <Page
-                key={`resume_page_1`}
-                pageNumber={1}
-                onClick={(e: { stopPropagation: () => any }) =>
-                  e.stopPropagation()
-                }
+              <iframe
+                title="resume"
+                style={{
+                  height: `${renderHeight}px`,
+                  width: `${renderWidth}px`,
+                }}
+                src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf&embedded=true"
               />
-            </Document>
+            </object>
           </main>
         </Modal>
       )}
     </>
   );
 };
+
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState({
+    width: -1,
+    height: -1,
+  });
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
+}

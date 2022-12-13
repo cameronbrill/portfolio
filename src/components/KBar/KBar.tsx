@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { Resume, Mask } from "@Components/Resume/Resume";
 import { Calendar } from "@Components/Calendar/Calendar";
@@ -25,6 +27,8 @@ const KBar = ({ children }: KBarProps) => {
   const [showCalendar, setShowCalendar] = useState(false);
   const closeCalendar = () => setShowCalendar(false);
 
+  const [notifier, setNotifier] = useState<Notyf>();
+
   useEffect(() => {
     function handleEscapeKey(event: KeyboardEvent) {
       if (event.code === "Escape") {
@@ -37,19 +41,24 @@ const KBar = ({ children }: KBarProps) => {
     return () => document.removeEventListener("keydown", handleEscapeKey);
   }, []);
 
-  const notifier = new Notyf({
-    duration: 3500,
-    position: {
-      x: "center",
-      y: "top",
-    },
-    types: [
-      {
-        type: "success",
-        background: "var(--color-notification)",
-      },
-    ],
-  });
+  useEffect(() => {
+    if (!notifier)
+      setNotifier(
+        new Notyf({
+          duration: 3500,
+          position: {
+            x: "center",
+            y: "top",
+          },
+          types: [
+            {
+              type: "success",
+              background: "var(--color-notification)",
+            },
+          ],
+        })
+      );
+  }, [notifier, setNotifier]);
 
   const actions = [
     {
@@ -69,6 +78,7 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "contact",
       perform: () => {
         /* just copy my email to clipboard */
+        if (!navigator.clipboard || !notifier) return;
         navigator.clipboard.writeText("contact@cameronbrill.me");
         notifier.success("copied email to clipboard");
         H.track("kbar-selected-email");
@@ -81,6 +91,7 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "snow",
       section: "Social Media",
       perform: () => {
+        if (!window) return;
         window.open(
           "https://www.youtube.com/channel/UC12W_hVgvbhF0kEn3sf7ECA",
           "_blank"
@@ -104,6 +115,7 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "social professional",
       section: "Social Media",
       perform: () => {
+        if (!window) return;
         window.open("https://github.com/cameronbrill", "_blank");
         H.track("kbar-selected-github");
       },
@@ -115,6 +127,7 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "social professional",
       section: "Social Media",
       perform: () => {
+        if (!window) return;
         window.open("https://devpost.com/cameronbrill", "_blank");
         H.track("kbar-selected-devpost");
       },
@@ -126,6 +139,7 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "social professional",
       section: "Social Media",
       perform: () => {
+        if (!window) return;
         window.open("https://www.linkedin.com/in/cameronbrill/", "_blank");
         H.track("kbar-selected-linkedin");
       },
