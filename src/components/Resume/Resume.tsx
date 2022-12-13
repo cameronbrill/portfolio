@@ -33,8 +33,13 @@ export const Resume = ({ visible }: ResumeProps) => {
         setRenderHeight((width * 0.9 * 11) / 8.5);
         setRenderWidth(width * 0.9);
       } else {
-        setRenderHeight(height * 0.9);
-        setRenderWidth((height * 0.9 * 8.5) / 11);
+        if (width > 965) {
+          setRenderHeight(height * 0.9);
+          setRenderWidth((height * 0.9 * 8.5) / 11 + 200);
+        } else {
+          setRenderHeight(height * 0.9);
+          setRenderWidth((height * 0.9 * 8.5) / 11);
+        }
       }
     }
   }, [height, width, setRenderHeight, setRenderWidth]);
