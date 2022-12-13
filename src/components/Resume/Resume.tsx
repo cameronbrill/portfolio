@@ -33,8 +33,13 @@ export const Resume = ({ visible }: ResumeProps) => {
         setRenderHeight((width * 0.9 * 11) / 8.5);
         setRenderWidth(width * 0.9);
       } else {
-        setRenderHeight(height * 0.9);
-        setRenderWidth((height * 0.9 * 8.5) / 11);
+        if (width > 965) {
+          setRenderHeight(height * 0.9);
+          setRenderWidth((height * 0.9 * 8.5) / 11 + 200);
+        } else {
+          setRenderHeight(height * 0.9);
+          setRenderWidth((height * 0.9 * 8.5) / 11);
+        }
       }
     }
   }, [height, width, setRenderHeight, setRenderWidth]);
@@ -46,24 +51,19 @@ export const Resume = ({ visible }: ResumeProps) => {
           closable={false}
           footer={null}
           className={styles.modal}
-          visible={visible}
+          open={visible}
         >
           <main className={styles.modalContent}>
-            {/*renderClientSideComponent && toRender*/}
-            <object
-              className={styles.document}
-              data="https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf"
-              type="application/pdf"
-            >
-              <iframe
-                title="resume"
+            <div style={{ height: "100vh" }} className={styles.document}>
+              <embed
                 style={{
-                  height: `${renderHeight}px`,
-                  width: `${renderWidth}px`,
+                  width: renderWidth,
+                  height: renderHeight,
                 }}
-                src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf&embedded=true"
+                type="application/pdf"
+                src="/cameron_brill_resume.pdf"
               />
-            </object>
+            </div>
           </main>
         </Modal>
       )}
