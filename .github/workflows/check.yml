@@ -10,5 +10,3 @@ jobs:
 
       - name: Check Dependencies
         uses: theahura/depcheck-action@main
-        with:
-          args: --ignores="eslint-config-next,next,typed-scss-modules,concurrently,sass,typescript,react-dom,@types/react-dom,eslint"
