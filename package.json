@@ -18,6 +18,7 @@
     "logrocket": "^3.0.0",
     "next": "latest",
     "notyf": "^3.10.0",
+    "pspdfkit": "^2022.5.2",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "^6.4.1",
@@ -27,8 +28,9 @@
     "s": "concurrently 'yarn start' 'yarn styles'",
     "start": "next",
     "styles": "yarn typed-scss-modules src -w",
-    "postinstall": "yarn download-webviewer",
+    "postinstall": "yarn prepare-pspdfkit",
     "download-webviewer": "npx @pdftron/webviewer-downloader --webviewerLocation ./public/webviewer/lib",
+    "prepare-pspdfkit": "cp -R ./node_modules/pspdfkit/dist/pspdfkit-lib public/pspdfkit-lib",
     "build": "next build",
     "test": "craco test",
     "eject": "craco eject"

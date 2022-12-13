@@ -4,8 +4,7 @@ import { Modal } from "antd";
 
 import styles from "./Resume.module.scss";
 import classNames from "classnames";
-import type WebViewer from "@pdftron/webviewer";
-import type { WebViewerInstance } from "@pdftron/webviewer";
+import type PSPDFKit from "pspdfkit";
 
 interface MaskProps {
   onClick: () => void;
@@ -46,19 +45,24 @@ export const Resume = ({ visible }: ResumeProps) => {
   useEffect(() => {
     if (!run) {
       setRun(true);
-      import("@pdftron/webviewer").then(() => {
-        WebViewer(
-          {
-            path: "/webviewer/lib",
-            initialDoc: "/cameron_brill_resume.pdf",
-          },
-          viewer.current
-        ).then((instance: WebViewerInstance) => {
-          const { docViewer } = instance;
-          docViewer;
-          // you can now call WebViewer APIs here...
+      const container = viewer.current;
+      let pdfKit: typeof PSPDFKit;
+
+      (async function () {
+        pdfKit = await import("pspdfkit");
+
+        if (pdfKit) {
+          pdfKit.unload(container);
+        }
+
+        await pdfKit.load({
+          container,
+          document: "/cameron_brill_resume.pdf",
+          baseUrl: `${window.location.protocol}//${window.location.host}/`,
         });
-      });
+      })();
+
+      return () => pdfKit && pdfKit.unload(container);
     }
   }, [setRun, run]);
 

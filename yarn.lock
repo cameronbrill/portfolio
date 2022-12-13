@@ -10791,6 +10791,7 @@ __metadata:
     logrocket: ^3.0.0
     next: latest
     notyf: ^3.10.0
+    pspdfkit: ^2022.5.2
     react: latest
     react-dom: latest
     react-router-dom: ^6.4.1
@@ -11852,6 +11853,13 @@ __metadata:
   version: 1.9.0
   resolution: "psl@npm:1.9.0"
   checksum: 20c4277f640c93d393130673f392618e9a8044c6c7bf61c53917a0fddb4952790f5f362c6c730a9c32b124813e173733f9895add8d26f566ed0ea0654b2e711d
+  languageName: node
+  linkType: hard
+
+"pspdfkit@npm:^2022.5.2":
+  version: 2022.5.2
+  resolution: "pspdfkit@npm:2022.5.2"
+  checksum: 1b000ed933ac5af45148122676487ee7207724b3d14196efb603e49c6a627345813c9bb0498edf3f4c3a8a3d1613c3b249834a400f8b12b134ae562031dcb31a
   languageName: node
   linkType: hard
 
