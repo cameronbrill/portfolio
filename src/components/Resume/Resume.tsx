@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Modal } from "antd";
 
 import styles from "./Resume.module.scss";
 import classNames from "classnames";
-import type PSPDFKit from "pspdfkit";
 
 interface MaskProps {
   onClick: () => void;
@@ -25,46 +24,20 @@ interface ResumeProps {
 
 export const Resume = ({ visible }: ResumeProps) => {
   const { height, width } = useWindowSize();
-  //   const [renderHeight, setRenderHeight] = useState<number>(-1);
-  //   const [renderWidth, setRenderWidth] = useState<number>(-1);
-  //
-  //   useEffect(() => {
-  //     if (height && width) {
-  //       if (height / width > 11 / 8.5) {
-  //         setRenderHeight((width * 0.9 * 11) / 8.5);
-  //         setRenderWidth(width * 0.9);
-  //       } else {
-  //         setRenderHeight(height * 0.9);
-  //         setRenderWidth((height * 0.9 * 8.5) / 11);
-  //       }
-  //     }
-  //   }, [height, width, setRenderHeight, setRenderWidth]);
-  const viewer = useRef(null);
-  const [run, setRun] = useState(false);
+  const [renderHeight, setRenderHeight] = useState<number>(-1);
+  const [renderWidth, setRenderWidth] = useState<number>(-1);
 
   useEffect(() => {
-    if (!run) {
-      setRun(true);
-      const container = viewer.current;
-      let pdfKit: typeof PSPDFKit;
-
-      (async function () {
-        pdfKit = await import("pspdfkit");
-
-        if (pdfKit) {
-          pdfKit.unload(container);
-        }
-
-        await pdfKit.load({
-          container,
-          document: "/cameron_brill_resume.pdf",
-          baseUrl: `${window.location.protocol}//${window.location.host}/`,
-        });
-      })();
-
-      return () => pdfKit && pdfKit.unload(container);
+    if (height && width) {
+      if (height / width > 11 / 8.5) {
+        setRenderHeight((width * 0.9 * 11) / 8.5);
+        setRenderWidth(width * 0.9);
+      } else {
+        setRenderHeight(height * 0.9);
+        setRenderWidth((height * 0.9 * 8.5) / 11);
+      }
     }
-  }, [setRun, run]);
+  }, [height, width, setRenderHeight, setRenderWidth]);
 
   return (
     <>
@@ -76,11 +49,16 @@ export const Resume = ({ visible }: ResumeProps) => {
           visible={visible}
         >
           <main className={styles.modalContent}>
-            <div
-              ref={viewer}
-              style={{ height: "100vh" }}
-              className={styles.document}
-            />
+            <div style={{ height: "100vh" }} className={styles.document}>
+              <embed
+                style={{
+                  width: renderWidth,
+                  height: renderHeight,
+                }}
+                type="application/pdf"
+                src="/cameron_brill_resume.pdf"
+              />
+            </div>
           </main>
         </Modal>
       )}
