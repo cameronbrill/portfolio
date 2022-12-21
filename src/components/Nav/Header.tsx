@@ -1,6 +1,6 @@
 import styles from "./Header.module.scss";
 const Header = () => {
-  const links = ["blog", "commands", "about"];
+  const links = ["about", "blog", "commands"];
   return (
     <header className={styles.header}>
       <ul className={styles.navList}>
