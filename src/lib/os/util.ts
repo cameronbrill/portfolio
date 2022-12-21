@@ -1,4 +1,4 @@
-export const getOs = () => {
+export const getCommandName = () => {
   if (navigator.userAgent.includes("Mac")) {
     return "⌘+K";
   }

@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect } from "react";
 import styles from "./page.module.scss";
-import { getOs } from "@Utils/Utils";
+import { getCommandName } from "lib/os/util";
 
 const Home = () => {
   const [os, setOs] = React.useState<string>("");
 
   useEffect(() => {
-    setOs(getOs());
+    setOs(getCommandName());
   }, [setOs]);
 
   return <div className={styles.cta}>{os}</div>;
