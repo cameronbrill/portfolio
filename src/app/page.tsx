@@ -1,16 +1,15 @@
 "use client";
-import React, { useEffect } from "react";
+import Header from "@Components/Nav/Header";
+import React from "react";
 import styles from "./page.module.scss";
-import { getCommandName } from "lib/os/util";
 
 const Home = () => {
-  const [os, setOs] = React.useState<string>("");
-
-  useEffect(() => {
-    setOs(getCommandName());
-  }, [setOs]);
-
-  return <div className={styles.cta}>{os}</div>;
+  return (
+    <div className={styles.body}>
+      <Header />
+      <div>quality content</div>
+    </div>
+  );
 };
 
 export default Home;
