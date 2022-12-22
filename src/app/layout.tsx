@@ -4,6 +4,7 @@ import { H } from "highlight.run";
 import LogRocket from "logrocket";
 import KBar from "@Components/KBar/KBar";
 import styles from "./layout.module.scss";
+import Header from "@Components/Nav/Header";
 
 H.init(process.env.REACT_APP_HIGHLIGHT_PROJ_ID, {
   environment: process.env.NODE_ENV,
@@ -18,6 +19,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <head></head>
       <body>
         <div>
+          <Header />
           <main>
             <div className={styles.content}>{children}</div>
           </main>
