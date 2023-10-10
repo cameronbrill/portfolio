@@ -1,14 +1,38 @@
 import Link from "next/link";
 import styles from "./Header.module.scss";
+
+interface NavAction {
+  name: string;
+  to?: string;
+  do?: () => void;
+}
+
 const Header = () => {
-  const links = { home: "", about: "about", blog: "blog" };
+  const links: NavAction[] = [
+    {
+      name: "home",
+      to: "",
+    },
+    {
+      name: "about",
+      to: "about",
+    },
+    {
+      name: "blog",
+      to: "blog",
+    },
+    {
+      name: "resume",
+      do: () => {},
+    },
+  ];
   return (
     <header className={styles.header}>
       <ul className={styles.navList}>
-        {Object.entries(links).map(([display, to]) => {
+        {links.map((action) => {
           return (
-            <li key={display} className={styles.navItem}>
-              <Link href={to}>{display}</Link>
+            <li key={action.name} className={styles.navItem}>
+              {action.to && <Link href={action.to}>{action.name}</Link>}
             </li>
           );
         })}
