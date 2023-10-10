@@ -61,7 +61,7 @@ export const Resume = ({ visible }: ResumeProps) => {
                   height: renderHeight,
                 }}
                 type="application/pdf"
-                src="/cameron_brill_resume.pdf"
+                src="https://cdn.rawgit.com/cameronbrill/public/main/resume/cameron_brill_resume.pdf"
               />
             </div>
           </main>
