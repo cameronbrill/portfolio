@@ -15,8 +15,8 @@ import {
 import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
 
-import styles from "./KBar.module.scss";
-import RenderResults from "./Results/Results";
+import styles from "./k-bar.module.scss";
+import Results from "./Results/Results";
 
 interface KBarProps {
   children?: React.ReactNode;
@@ -173,7 +173,7 @@ const KBar = ({ children }: KBarProps) => {
                   className={styles.search}
                   placeholder="Type a command or search..."
                 />
-                <RenderResults />
+                <Results />
               </KBarAnimator>
             </KBarPositioner>
           </div>

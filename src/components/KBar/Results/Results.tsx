@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { Action, KBarResults, NO_GROUP, useMatches } from "kbar";
-import styles from "./Results.module.scss";
+import styles from "./results.module.scss";
 
 const ResultItem = React.forwardRef(function ResultItem(
   {
@@ -41,7 +41,7 @@ const ResultItem = React.forwardRef(function ResultItem(
   );
 });
 
-const RenderResults = () => {
+const Results = () => {
   const groups = useMatches();
 
   return (
@@ -58,4 +58,4 @@ const RenderResults = () => {
   );
 };
 
-export default RenderResults;
+export default Results;
