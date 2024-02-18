@@ -13,7 +13,6 @@ export const Mask = ({ onClick, children, className }: MaskProps) => {
       onClick={onClick}
       onKeyUp={onClick}
       className={classNames(styles.mask, className)}
-      aria-hidden="true"
     >
       {children}
     </div>
