@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <KBar />
-      <head></head>
+      <head />
       <body>
         <div>
           <main>

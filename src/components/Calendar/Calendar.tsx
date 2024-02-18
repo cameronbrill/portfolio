@@ -20,6 +20,6 @@ export const Calendar = () => {
     <div
       className={classNames("calendly-inline-widget", styles.calendlyWidget)}
       data-url="https://calendly.com/cameronbrill"
-    ></div>
+    />
   );
 };
