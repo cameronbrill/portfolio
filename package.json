@@ -22,7 +22,8 @@
     "start": "next",
     "styles": "yarn typed-scss-modules src -w",
     "build": "next build",
-    ":lint": "yarn run eslint --ext .ts,.tsx src"
+    "lint": "yarn run eslint --ext .ts,.tsx src",
+    "lint:fix": "yarn run eslint --fix --ext .ts,.tsx src"
   },
   "browserslist": {
     "production": [
