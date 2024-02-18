@@ -1,3 +1,17 @@
 {
-  "extends": "react-app"
+  "extends": ["react-app", "eslint:recommended", "plugin:jsx-a11y/recommended"],
+  "plugins": ["@stylistic", "@typescript-eslint", "jsx-a11y"],
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "additional-rule": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "rules": {
+        "additional-typescript-only-rule": "warn"
+      }
+    }
+  ]
 }
