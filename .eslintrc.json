@@ -7,16 +7,5 @@
   ],
   "plugins": ["@stylistic", "@typescript-eslint", "jsx-a11y"],
   "root": true,
-  "parser": "@typescript-eslint/parser",
-  "rules": {
-    "additional-rule": "warn"
-  },
-  "overrides": [
-    {
-      "files": ["**/*.ts?(x)"],
-      "rules": {
-        "additional-typescript-only-rule": "warn"
-      }
-    }
-  ]
+  "parser": "@typescript-eslint/parser"
 }
