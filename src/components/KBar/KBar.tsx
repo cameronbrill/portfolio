@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import type React from "react";
+import { useEffect, useState } from "react";
 import { Resume } from "@Components/Resume/Resume";
 import { Mask } from "@Components/Mask/Mask";
 import { Calendar } from "@Components/Calendar/Calendar";

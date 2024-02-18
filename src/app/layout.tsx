@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import type { ReactNode } from "react";
 import "./styles.scss";
 import { H } from "highlight.run";
 import LogRocket from "logrocket";
