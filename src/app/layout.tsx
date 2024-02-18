@@ -13,7 +13,7 @@ LogRocket.init(`${process.env.REACT_APP_LOG_ROCKET_PROJ_ID}`);
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <html>
+    <html lang="en">
       <KBar />
       <head></head>
       <body>
