@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Resume } from "@Components/Resume/Resume";
 import { Mask } from "@Components/Mask/Mask";
 import { Calendar } from "@Components/Calendar/Calendar";
@@ -25,9 +25,9 @@ interface KBarProps {
 
 const KBar = ({ children }: KBarProps) => {
   const [showModal, setShowModal] = useState(false);
-  const closeModal = () => setShowModal(false);
+  const closeModal = useCallback(() => setShowModal(false), []);
   const [showCalendar, setShowCalendar] = useState(false);
-  const closeCalendar = () => setShowCalendar(false);
+  const closeCalendar = useCallback(() => setShowCalendar(false), []);
 
   const [notifier, setNotifier] = useState<Notyf>();
 
@@ -41,7 +41,7 @@ const KBar = ({ children }: KBarProps) => {
 
     document.addEventListener("keydown", handleEscapeKey);
     return () => document.removeEventListener("keydown", handleEscapeKey);
-  }, []);
+  }, [closeModal, closeCalendar]);
 
   useEffect(() => {
     if (!notifier)
@@ -60,7 +60,7 @@ const KBar = ({ children }: KBarProps) => {
           ],
         })
       );
-  }, [notifier, setNotifier]);
+  }, [notifier]);
 
   const actions = [
     {

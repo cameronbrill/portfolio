@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     setOs(getOs());
-  }, [setOs]);
+  }, []);
 
   return <div className={styles.cta}>{os}</div>;
 };

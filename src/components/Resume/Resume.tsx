@@ -28,7 +28,7 @@ export const Resume = ({ visible }: ResumeProps) => {
         }
       }
     }
-  }, [height, width, setRenderHeight, setRenderWidth]);
+  }, [height, width]);
 
   return (
     <>
