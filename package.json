@@ -24,6 +24,7 @@
     "build": "next build",
     "lint": "yarn run -T eslint --ext .ts,.tsx src",
     "lint:fix": "yarn run -T eslint --fix --ext .ts,.tsx src",
+    "type-check": "yarn run -T tsc --project tsconfig.json"
   },
   "browserslist": {
     "production": [
