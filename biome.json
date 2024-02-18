@@ -18,6 +18,8 @@
     }
   },
   "formatter": {
-    "enabled": true
+    "enabled": true,
+    "ignore": ["src/setupTests.ts"],
+    "indentStyle": "space"
   }
 }
