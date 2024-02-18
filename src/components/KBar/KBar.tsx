@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Resume, Mask } from "@Components/Resume/Resume";
+import { Resume } from "@Components/Resume/Resume";
+import { Mask } from "@Components/Mask/Mask";
 import { Calendar } from "@Components/Calendar/Calendar";
 import { H } from "highlight.run";
 import {

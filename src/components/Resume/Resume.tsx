@@ -3,20 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Modal } from "antd";
 
 import styles from "./Resume.module.scss";
-import classNames from "classnames";
-
-interface MaskProps {
-  onClick: () => void;
-  children?: React.ReactNode;
-  className?: string;
-}
-export const Mask = ({ onClick, children, className }: MaskProps) => {
-  return (
-    <div onClick={onClick} className={classNames(styles.mask, className)}>
-      {children}
-    </div>
-  );
-};
 
 interface ResumeProps {
   visible: boolean;
