@@ -163,6 +163,7 @@ const KBar = ({ children }: KBarProps) => {
           <div
             onClick={(e: { stopPropagation: () => any }) => e.stopPropagation()}
             style={{ zIndex: 2147483647, position: "absolute" }}
+            aria-hidden="true"
           >
             <KBarPositioner
               style={{ padding: "0 !important", paddingTop: "14vh" }}
