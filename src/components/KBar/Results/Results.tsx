@@ -32,7 +32,7 @@ const ResultItem = React.forwardRef(function ResultItem(
       </div>
       {action.shortcut?.length ? (
         <div className={styles.resultItemShortCut}>
-          {action.shortcut.map((sc: any) => (
+          {action.shortcut.map((sc: string) => (
             <kbd key={sc}>{sc}</kbd>
           ))}
         </div>

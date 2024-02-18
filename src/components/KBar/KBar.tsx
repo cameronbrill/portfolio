@@ -162,7 +162,9 @@ const KBar = ({ children }: KBarProps) => {
       <KBarProvider actions={actions}>
         <KBarPortal>
           <div
-            onClick={(e: { stopPropagation: () => any }) => e.stopPropagation()}
+            onClick={(e: { stopPropagation: () => void }) =>
+              e.stopPropagation()
+            }
             style={{ zIndex: 2147483647, position: "absolute" }}
             aria-hidden="true"
           >
