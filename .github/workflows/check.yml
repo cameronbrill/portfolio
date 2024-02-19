@@ -10,10 +10,6 @@ jobs:
       checks: read
       statuses: read
     steps:
-      - name: Dump vars context
-        env:
-          VARS_JSON: ${{ toJSON(github.jobs[github.job].name) }}
-        run: echo "${VARS_JSON}"
       - name: Run Merge Gatekeeper
         uses: upsidr/merge-gatekeeper@v1
         with:
