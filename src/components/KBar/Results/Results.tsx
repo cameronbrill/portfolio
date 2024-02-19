@@ -41,7 +41,7 @@ const ResultItem = React.forwardRef(function ResultItem(
   );
 });
 
-const Results = () => {
+export const Results = () => {
   const groups = useMatches();
 
   return (
@@ -57,5 +57,3 @@ const Results = () => {
     />
   );
 };
-
-export default Results;

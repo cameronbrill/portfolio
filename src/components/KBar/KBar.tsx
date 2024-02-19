@@ -17,7 +17,7 @@ import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
 
 import styles from "./k-bar.module.scss";
-import Results from "./Results/Results";
+import { Results } from "@Components/KBar/Results/Results";
 
 interface KBarProps {
   children?: React.ReactNode;
