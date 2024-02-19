@@ -58,7 +58,7 @@ const KBar = ({ children }: KBarProps) => {
               background: "var(--color-notification)",
             },
           ],
-        })
+        }),
       );
     }
   }, [notifier]);
@@ -81,7 +81,9 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "contact",
       perform: () => {
         /* just copy my email to clipboard */
-        if (!(navigator.clipboard && notifier)) { return; }
+        if (!(navigator.clipboard && notifier)) {
+          return;
+        }
         navigator.clipboard.writeText("contact@cameronbrill.me");
         notifier.success("copied email to clipboard");
         H.track("kbar-selected-email");
@@ -94,10 +96,12 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "snow",
       section: "Social Media",
       perform: () => {
-        if (!window) { return; }
+        if (!window) {
+          return;
+        }
         window.open(
           "https://www.youtube.com/channel/UC12W_hVgvbhF0kEn3sf7ECA",
-          "_blank"
+          "_blank",
         );
         H.track("kbar-selected-snowboarding");
       },
@@ -118,7 +122,9 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "social professional",
       section: "Social Media",
       perform: () => {
-        if (!window) { return; }
+        if (!window) {
+          return;
+        }
         window.open("https://github.com/cameronbrill", "_blank");
         H.track("kbar-selected-github");
       },
@@ -130,7 +136,9 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "social professional",
       section: "Social Media",
       perform: () => {
-        if (!window) { return; }
+        if (!window) {
+          return;
+        }
         window.open("https://devpost.com/cameronbrill", "_blank");
         H.track("kbar-selected-devpost");
       },
@@ -142,7 +150,9 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "social professional",
       section: "Social Media",
       perform: () => {
-        if (!window) { return; }
+        if (!window) {
+          return;
+        }
         window.open("https://www.linkedin.com/in/cameronbrill/", "_blank");
         H.track("kbar-selected-linkedin");
       },
