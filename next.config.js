@@ -1,7 +1,4 @@
 const config = {
-  experimental: {
-    appDir: true,
-  },
   webpack: (
     config,
     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
