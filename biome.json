@@ -8,6 +8,7 @@
     "rules": {
       "all": true,
       "style": {
+        "all": true,
         "useNamingConvention": {
           "level": "error",
           "options": {
