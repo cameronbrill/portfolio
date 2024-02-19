@@ -22,5 +22,11 @@
     "enabled": true,
     "ignore": ["src/setupTests.ts"],
     "indentStyle": "space"
-  }
+  },
+  "overrides": [
+    {
+      "include": ["**/layout.tsx", "**/page.tsx"],
+      "linter": { "rules": { "style": { "noDefaultExport": "off" } } }
+    }
+  ]
 }
