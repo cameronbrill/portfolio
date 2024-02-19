@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/jest-dom": "^6.4.2",
     "@types/react": "^18.0",
     "@types/react-dom": "^18.0",
     "antd": "^4",
     "classnames": "^2.3.1",
-    "highlight.run": "^4.2.5",
+    "highlight.run": "^8.4.1",
     "kbar": "^0.1.0-beta.21",
     "logrocket": "^3.0.0",
     "next": "canary",
@@ -58,10 +58,10 @@
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "concurrently": "^6.3.0",
     "eslint": "^8.56.0",
-    "eslint-config-next": "14.1.0",
+    "eslint-config-next": "^14.1.0",
     "prettier": "3.2.5",
-    "sass": "^1.51.0",
-    "typed-scss-modules": "^6",
+    "sass": "^1.71.0",
+    "typed-scss-modules": "^8.0.0",
     "typescript": "^4.6.4"
   },
   "packageManager": "yarn@3.1.1"
