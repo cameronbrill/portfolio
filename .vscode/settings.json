@@ -4,5 +4,13 @@
     "**/.pnp.*": true
   },
   "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "Jota0222.multi-formatter",
+    "multiFormatter.formatterList": [
+      "biomejs.biome",
+      "esbenp.prettier-vscode"
+    ]
+  },
+  "editor.formatOnSave": true
 }
