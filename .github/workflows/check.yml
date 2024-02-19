@@ -3,6 +3,18 @@ name: code check
 on: [pull_request]
 
 jobs:
+  merge-gatekeeper:
+    name: Mergeability
+    runs-on: ubuntu-latest
+    permissions:
+      checks: read
+      statuses: read
+    steps:
+      - name: Run Merge Gatekeeper
+        uses: upsidr/merge-gatekeeper@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
   yarn-check:
     name: Yarn Check
     runs-on: ubuntu-latest
