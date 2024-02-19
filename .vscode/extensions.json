@@ -1,6 +1,9 @@
 {
   "recommendations": [
     "arcanis.vscode-zipfs",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "jota0222.multi-formatter",
+    "esbenp.prettier-vscode",
+    "biomejs.biome"
   ]
 }
