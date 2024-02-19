@@ -18,14 +18,12 @@ export const Resume = ({ visible }: ResumeProps) => {
       if (height / width > 11 / 8.5) {
         setRenderHeight((width * 0.9 * 11) / 8.5);
         setRenderWidth(width * 0.9);
+      } else if (width > 965) {
+        setRenderHeight(height * 0.9);
+        setRenderWidth((height * 0.9 * 8.5) / 11 + 200);
       } else {
-        if (width > 965) {
-          setRenderHeight(height * 0.9);
-          setRenderWidth((height * 0.9 * 8.5) / 11 + 200);
-        } else {
-          setRenderHeight(height * 0.9);
-          setRenderWidth((height * 0.9 * 8.5) / 11);
-        }
+        setRenderHeight(height * 0.9);
+        setRenderWidth((height * 0.9 * 8.5) / 11);
       }
     }
   }, [height, width]);
