@@ -1,9 +1,11 @@
-import type { ReactNode } from "react";
-import "./styles.scss";
 import { H } from "highlight.run";
 import LogRocket from "logrocket";
+import type { ReactNode } from "react";
+
 import { KBar } from "@Components/KBar/KBar";
+
 import styles from "./layout.module.scss";
+import "./styles.scss";
 
 H.init(process.env.REACT_APP_HIGHLIGHT_PROJ_ID, {
   environment: process.env.NODE_ENV,

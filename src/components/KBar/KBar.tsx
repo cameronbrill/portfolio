@@ -1,10 +1,5 @@
 "use client";
 
-import type React from "react";
-import { useCallback, useEffect, useState } from "react";
-import { Resume } from "@Components/Resume/Resume";
-import { Mask } from "@Components/Mask/Mask";
-import { Calendar } from "@Components/Calendar/Calendar";
 import { H } from "highlight.run";
 import {
   KBarAnimator,
@@ -16,8 +11,15 @@ import {
 import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
 
-import styles from "./k-bar.module.scss";
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
+
+import { Calendar } from "@Components/Calendar/Calendar";
 import { Results } from "@Components/KBar/Results/Results";
+import { Mask } from "@Components/Mask/Mask";
+import { Resume } from "@Components/Resume/Resume";
+
+import styles from "@Components/KBar/k-bar.module.scss";
 
 interface KBarProps {
   children?: React.ReactNode;

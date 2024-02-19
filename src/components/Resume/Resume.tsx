@@ -1,6 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
+
 import { Modal } from "antd";
+import { useEffect, useState } from "react";
 
 import styles from "./resume.module.scss";
 
