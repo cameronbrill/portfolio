@@ -31,6 +31,7 @@
     "lint:fix:unsafe": "yarn lint --apply-unsafe",
     "lint:slow": "next lint",
     "lint:fix:slow": "yarn lint:slow --fix",
+    "lint:ci": "biome ci --formatter-enabled=false --linter-enabled=true --organize-imports-enabled=false --max-diagnostics 1000 ./src",
     "type-check": "tsc --project tsconfig.json"
   },
   "browserslist": {
