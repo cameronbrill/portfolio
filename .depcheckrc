@@ -1,2 +1,0 @@
-ignores: ["eslint-config-next", "next", "typescript", "concurrently", "sass", "typed-scss-modules", "@craco/craco", "react-dom", "@types/react-dom", "eslint"]
-skip-missing: true

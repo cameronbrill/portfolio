@@ -9,7 +9,7 @@ my personal website using next.js nested layouts
 First, install dependencies
 
 ```
-pnpm install
+yarn
 ```
 
 ### running
@@ -17,7 +17,7 @@ pnpm install
 Start the typed scss module builder and development server
 
 ```
-pnpm -s start
+yarn start
 ```
 
 ### tooling
@@ -27,6 +27,6 @@ Take a closer look at the scripts in [package.json](./package.json). There are c
 
 To get started, try linting and formatting the codebase:
 ```
-pnpm -s lint
-pnpm -s format
+yarn lint
+yarn format
 ```

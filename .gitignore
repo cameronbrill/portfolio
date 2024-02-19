@@ -18,7 +18,13 @@
 .env.test.local
 .env.production.local
 
-pnpm-debug.log*
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 .next
 

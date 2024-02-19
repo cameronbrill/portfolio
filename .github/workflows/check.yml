@@ -16,28 +16,29 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           self: Mergeability
 
-  pnpm-check:
-    name: pnpm ${{ matrix.command }}
+  yarn-check:
+    name: yarn ${{ matrix.command }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        command: ["lint:ci", "format:ci", "build:scss"]
+        command: ["lint:ci", "format:ci", "build:scss", "install --immutable --immutable-cache --check-cache"]
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v3
+      - name: Set node package manager
+        run: corepack enable
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: ".node-version"
-          cache: 'pnpm'
+          cache: 'yarn'
 
       - name: Install project dependencies
-        run: pnpm install
+        run: yarn install --immutable --immutable-cache
 
       - name: Check ${{ matrix.command }}
-        run: pnpm --silent ${{ matrix.command }}
+        run: yarn ${{ matrix.command }}
         env:
           FORCE_COLOR: 2
