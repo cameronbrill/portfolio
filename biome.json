@@ -27,6 +27,10 @@
     {
       "include": ["**/layout.tsx", "**/page.tsx"],
       "linter": { "rules": { "style": { "noDefaultExport": "off" } } }
+    },
+    {
+      "include": ["**/*.scss.d.ts"],
+      "linter": { "rules": { "nursery": { "all":true, "useFilenamingConvention": "off" } } }
     }
   ]
 }
