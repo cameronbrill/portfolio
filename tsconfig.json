@@ -18,7 +18,7 @@
     "jsx": "preserve",
     "paths": {
       "@Components/*": ["components/*"],
-      "@Utils/*": ["utils/*"],
+      "@Lib/*": ["lib/*"],
       "@Pages/*": ["pages/*"]
     },
     "incremental": true,
