@@ -10,16 +10,14 @@ import {
 } from "kbar";
 import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
-
 import type React from "react";
 import { useCallback, useEffect, useState } from "react";
 
 import { Calendar } from "@Components/Calendar/Calendar";
 import { Results } from "@Components/KBar/Results/Results";
+import styles from "@Components/KBar/k-bar.module.scss";
 import { Mask } from "@Components/Mask/Mask";
 import { Resume } from "@Components/Resume/Resume";
-
-import styles from "@Components/KBar/k-bar.module.scss";
 
 interface KBarProps {
   children?: React.ReactNode;

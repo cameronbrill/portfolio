@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import type React from "react";
+
 import styles from "./mask.module.scss";
 
 interface MaskProps {
