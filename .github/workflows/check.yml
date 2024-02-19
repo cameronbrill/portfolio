@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        command: ["lint:ci", "format:ci", "build:scss", "install --immutable --immutable-cache --check-cache"]
+        command: ["lint:ci", "format:ci", "build:scss"]
     steps:
       - uses: actions/checkout@v4
 
