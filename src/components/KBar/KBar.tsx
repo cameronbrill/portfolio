@@ -58,7 +58,7 @@ const KBar = ({ children }: KBarProps) => {
               background: "var(--color-notification)",
             },
           ],
-        }),
+        })
       );
   }, [notifier]);
 
@@ -96,7 +96,7 @@ const KBar = ({ children }: KBarProps) => {
         if (!window) return;
         window.open(
           "https://www.youtube.com/channel/UC12W_hVgvbhF0kEn3sf7ECA",
-          "_blank",
+          "_blank"
         );
         H.track("kbar-selected-snowboarding");
       },

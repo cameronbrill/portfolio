@@ -11,14 +11,14 @@ const ResultItem = React.forwardRef(function ResultItem(
     action: Action;
     active: boolean;
   },
-  ref: React.Ref<HTMLDivElement>,
+  ref: React.Ref<HTMLDivElement>
 ) {
   return (
     <div
       ref={ref}
       className={classNames(
         { [styles.resultItemActive]: active },
-        styles.resultItem,
+        styles.resultItem
       )}
     >
       <div className={styles.resultItemIcon}>
