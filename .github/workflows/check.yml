@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        command: ["lint:ci", "format:ci", "styles", "npm audit -A -R"]
+        command: ["lint:ci", "format:ci", "styles", "npm audit -A"]
     steps:
       - uses: actions/checkout@v4
 
