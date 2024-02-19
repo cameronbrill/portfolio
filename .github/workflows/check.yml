@@ -34,3 +34,5 @@ jobs:
 
       - name: Check ${{ matrix.command }}
         run: yarn ${{ matrix.command }}
+        env:
+          FORCE_COLOR: 2
