@@ -24,7 +24,7 @@
     "build": "next build",
     "format": "biome format ./src",
     "format:fix": "yarn format --write",
-    "lint": "biome lint --max-diagnostics 100 ./src --diagnostic-level=error",
+    "lint": "biome lint --max-diagnostics 100 ./src",
     "lint:fix": "yarn lint --apply",
     "lint:fix:unsafe": "yarn lint --apply-unsafe",
     "lint:slow": "next lint",
