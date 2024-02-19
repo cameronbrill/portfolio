@@ -7,5 +7,5 @@ my personal website using next.js nested layouts
 to run locally, clone the repo, then run the following commands:
 ```
 pnpm // install dependencies
-pnpm dev // start the typed scss module builder and development server on localhost:3000
+pnpm -s start // start the typed scss module builder and development server on localhost:3000
 ```
