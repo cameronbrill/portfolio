@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import "./styles.scss";
 import { H } from "highlight.run";
 import LogRocket from "logrocket";
-import KBar from "@Components/KBar/KBar";
+import { KBar } from "@Components/KBar/KBar";
 import styles from "./layout.module.scss";
 
 H.init(process.env.REACT_APP_HIGHLIGHT_PROJ_ID, {

@@ -23,7 +23,7 @@ interface KBarProps {
   children?: React.ReactNode;
 }
 
-const KBar = ({ children }: KBarProps) => {
+export const KBar = ({ children }: KBarProps) => {
   const [showModal, setShowModal] = useState(false);
   const closeModal = useCallback(() => setShowModal(false), []);
   const [showCalendar, setShowCalendar] = useState(false);
@@ -199,5 +199,3 @@ const KBar = ({ children }: KBarProps) => {
     </>
   );
 };
-
-export default KBar;
