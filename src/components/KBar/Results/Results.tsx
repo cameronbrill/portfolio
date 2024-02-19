@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { type Action, KBarResults, NO_GROUP, useMatches } from "kbar";
 import React from "react";
 
-import styles from "./results.module.scss";
+import styles from "./Results.module.scss";
 
 const ResultItem = React.forwardRef(function ResultItem(
   {

@@ -3,7 +3,7 @@
 import { Modal } from "antd";
 import { useEffect, useState } from "react";
 
-import styles from "./resume.module.scss";
+import styles from "./Resume.module.scss";
 
 interface ResumeProps {
   visible: boolean;

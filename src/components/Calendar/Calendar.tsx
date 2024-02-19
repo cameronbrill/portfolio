@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { useEffect } from "react";
 
-import styles from "@Components/Calendar/calendar.module.scss";
+import styles from "./Calendar.module.scss";
 
 export const Calendar = () => {
   useEffect(() => {

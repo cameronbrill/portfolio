@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import type React from "react";
 
-import styles from "./mask.module.scss";
+import styles from "./Mask.module.scss";
 
 interface MaskProps {
   onClick: () => void;

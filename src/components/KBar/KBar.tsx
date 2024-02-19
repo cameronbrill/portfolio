@@ -15,9 +15,10 @@ import { useCallback, useEffect, useState } from "react";
 
 import { Calendar } from "@Components/Calendar/Calendar";
 import { Results } from "@Components/KBar/Results/Results";
-import styles from "@Components/KBar/k-bar.module.scss";
 import { Mask } from "@Components/Mask/Mask";
 import { Resume } from "@Components/Resume/Resume";
+
+import styles from "./KBar.module.scss";
 
 interface KBarProps {
   children?: React.ReactNode;
