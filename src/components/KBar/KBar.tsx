@@ -80,7 +80,7 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "contact",
       perform: () => {
         /* just copy my email to clipboard */
-        if (!navigator.clipboard || !notifier) return;
+        if (!(navigator.clipboard && notifier)) return;
         navigator.clipboard.writeText("contact@cameronbrill.me");
         notifier.success("copied email to clipboard");
         H.track("kbar-selected-email");
