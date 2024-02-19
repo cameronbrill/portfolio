@@ -36,7 +36,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install project dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Check ${{ matrix.command }}
         run: yarn ${{ matrix.command }}
