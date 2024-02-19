@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "all": true,
+      "style": {
+        "all": true,
+        "useNamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": false
+          }
+        }
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "ignore": ["src/setupTests.ts"],
+    "indentStyle": "space"
+  },
+  "overrides": [
+    {
+      "include": ["**/layout.tsx", "**/page.tsx"],
+      "linter": { "rules": { "style": { "noDefaultExport": "off" } } }
+    },
+    {
+      "include": ["**/*.scss.d.ts"],
+      "linter": { "rules": { "nursery": { "all":true, "useFilenamingConvention": "off" } } }
+    }
+  ]
+}

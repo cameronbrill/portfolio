@@ -1,8 +1,5 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Resume, Mask } from "@Components/Resume/Resume";
-import { Calendar } from "@Components/Calendar/Calendar";
 import { H } from "highlight.run";
 import {
   KBarAnimator,
@@ -13,19 +10,25 @@ import {
 } from "kbar";
 import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
+
+import { Calendar } from "@Components/Calendar/Calendar";
+import { Results } from "@Components/KBar/Results/Results";
+import { Mask } from "@Components/Mask/Mask";
+import { Resume } from "@Components/Resume/Resume";
 
 import styles from "./KBar.module.scss";
-import RenderResults from "./Results/Results";
 
 interface KBarProps {
   children?: React.ReactNode;
 }
 
-const KBar = ({ children }: KBarProps) => {
+export const KBar = ({ children }: KBarProps) => {
   const [showModal, setShowModal] = useState(false);
-  const closeModal = () => setShowModal(false);
+  const closeModal = useCallback(() => setShowModal(false), []);
   const [showCalendar, setShowCalendar] = useState(false);
-  const closeCalendar = () => setShowCalendar(false);
+  const closeCalendar = useCallback(() => setShowCalendar(false), []);
 
   const [notifier, setNotifier] = useState<Notyf>();
 
@@ -39,10 +42,10 @@ const KBar = ({ children }: KBarProps) => {
 
     document.addEventListener("keydown", handleEscapeKey);
     return () => document.removeEventListener("keydown", handleEscapeKey);
-  }, []);
+  }, [closeModal, closeCalendar]);
 
   useEffect(() => {
-    if (!notifier)
+    if (!notifier) {
       setNotifier(
         new Notyf({
           duration: 3500,
@@ -56,9 +59,10 @@ const KBar = ({ children }: KBarProps) => {
               background: "var(--color-notification)",
             },
           ],
-        })
+        }),
       );
-  }, [notifier, setNotifier]);
+    }
+  }, [notifier]);
 
   const actions = [
     {
@@ -78,7 +82,9 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "contact",
       perform: () => {
         /* just copy my email to clipboard */
-        if (!navigator.clipboard || !notifier) return;
+        if (!(navigator.clipboard && notifier)) {
+          return;
+        }
         navigator.clipboard.writeText("contact@cameronbrill.me");
         notifier.success("copied email to clipboard");
         H.track("kbar-selected-email");
@@ -91,10 +97,12 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "snow",
       section: "Social Media",
       perform: () => {
-        if (!window) return;
+        if (!window) {
+          return;
+        }
         window.open(
           "https://www.youtube.com/channel/UC12W_hVgvbhF0kEn3sf7ECA",
-          "_blank"
+          "_blank",
         );
         H.track("kbar-selected-snowboarding");
       },
@@ -115,7 +123,9 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "social professional",
       section: "Social Media",
       perform: () => {
-        if (!window) return;
+        if (!window) {
+          return;
+        }
         window.open("https://github.com/cameronbrill", "_blank");
         H.track("kbar-selected-github");
       },
@@ -127,7 +137,9 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "social professional",
       section: "Social Media",
       perform: () => {
-        if (!window) return;
+        if (!window) {
+          return;
+        }
         window.open("https://devpost.com/cameronbrill", "_blank");
         H.track("kbar-selected-devpost");
       },
@@ -139,7 +151,9 @@ const KBar = ({ children }: KBarProps) => {
       keywords: "social professional",
       section: "Social Media",
       perform: () => {
-        if (!window) return;
+        if (!window) {
+          return;
+        }
         window.open("https://www.linkedin.com/in/cameronbrill/", "_blank");
         H.track("kbar-selected-linkedin");
       },
@@ -160,7 +174,12 @@ const KBar = ({ children }: KBarProps) => {
       <KBarProvider actions={actions}>
         <KBarPortal>
           <div
-            onClick={(e: { stopPropagation: () => any }) => e.stopPropagation()}
+            onClick={(e: { stopPropagation: () => void }) =>
+              e.stopPropagation()
+            }
+            onKeyUp={(e: { stopPropagation: () => void }) =>
+              e.stopPropagation()
+            }
             style={{ zIndex: 2147483647, position: "absolute" }}
           >
             <KBarPositioner
@@ -171,7 +190,7 @@ const KBar = ({ children }: KBarProps) => {
                   className={styles.search}
                   placeholder="Type a command or search..."
                 />
-                <RenderResults />
+                <Results />
               </KBarAnimator>
             </KBarPositioner>
           </div>
@@ -181,5 +200,3 @@ const KBar = ({ children }: KBarProps) => {
     </>
   );
 };
-
-export default KBar;

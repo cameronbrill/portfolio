@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
 import classNames from "classnames";
+import { useEffect } from "react";
+
 import styles from "./Calendar.module.scss";
 
 export const Calendar = () => {
@@ -20,6 +21,6 @@ export const Calendar = () => {
     <div
       className={classNames("calendly-inline-widget", styles.calendlyWidget)}
       data-url="https://calendly.com/cameronbrill"
-    ></div>
+    />
   );
 };
