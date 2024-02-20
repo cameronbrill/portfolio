@@ -1,8 +1,9 @@
 {
   "search.exclude": {
-    "**/.pnp.*": true
+    "**/.pnp.*": true,
+    "**/.yarn": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "Jota0222.multi-formatter",
@@ -11,5 +12,8 @@
       "esbenp.prettier-vscode"
     ]
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+  "biome_lsp.trace.server": "verbose",
+  "biome.lspBin": ".yarn/sdks/biome-lsp/bin/biome-lsp",
 }
