@@ -1,19 +1,20 @@
 {
   "search.exclude": {
     "**/.pnp.*": true,
-    "**/.yarn": true
+    "**/.yarn/cache": true,
+    "**/.yarn/releases": true
   },
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "Jota0222.multi-formatter",
-    "multiFormatter.formatterList": [
-      "biomejs.biome",
-      "esbenp.prettier-vscode"
-    ]
+    "multiFormatter.formatterList": ["biomejs.biome", "esbenp.prettier-vscode"]
   },
   "editor.formatOnSave": true,
   "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "biome_lsp.trace.server": "verbose",
-  "biome.lspBin": ".yarn/sdks/biome-lsp/bin/biome-lsp",
+  "vitest.watchOnStartup": true,
+  "vitest.showFailMessages": true,
+  "vitest.enable": true,
+  "vitest.commandLine": "yarn test:watch"
 }
