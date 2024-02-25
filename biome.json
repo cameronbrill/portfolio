@@ -25,17 +25,50 @@
   },
   "formatter": {
     "enabled": true,
-    "ignore": ["src/setupTests.ts"],
+    "ignore": [
+      "src/setupTests.ts"
+    ],
     "indentStyle": "space"
   },
   "overrides": [
     {
-      "include": ["**/layout.tsx", "**/page.tsx"],
-      "linter": { "rules": { "style": { "noDefaultExport": "off" } } }
+      "include": [
+        "**/layout.tsx",
+        "**/page.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
     },
     {
-      "include": ["**/*.scss.d.ts"],
-      "linter": { "rules": { "nursery": { "all":true, "useFilenamingConvention": "off" } } }
+      "include": [
+        "**/*.scss.d.ts"
+      ],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "all": true,
+            "useFilenamingConvention": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": [
+        "**/*.test.ts*"
+      ],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "all": true,
+            "useImportRestrictions": "off"
+          }
+        }
+      }
     }
   ]
 }
