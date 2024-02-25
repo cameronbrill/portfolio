@@ -30,6 +30,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/jest-dom", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:6.4.2"],\
           ["@testing-library/react", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:14.2.1"],\
           ["@trivago/prettier-plugin-sort-imports", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:4.3.0"],\
+          ["@types/lodash", "npm:4.14.202"],\
           ["@types/node", "npm:20.11.19"],\
           ["@types/react", "npm:18.2.57"],\
           ["@types/react-dom", "npm:18.2.19"],\
@@ -43,6 +44,7 @@ const RAW_RUNTIME_STATE =
           ["highlight.run", "npm:8.4.1"],\
           ["jsdom", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:24.0.0"],\
           ["kbar", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:0.1.0-beta.45"],\
+          ["lodash", "npm:4.17.21"],\
           ["logrocket", "npm:3.0.1"],\
           ["next", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:14.1.1-canary.61"],\
           ["notyf", "npm:3.10.0"],\
@@ -1729,6 +1731,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/keyv", "npm:3.1.4"],\
           ["@types/node", "npm:20.11.20"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/lodash", [\
+      ["npm:4.14.202", {\
+        "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.202-76de3e302b-1bb9760a5b.zip/node_modules/@types/lodash/",\
+        "packageDependencies": [\
+          ["@types/lodash", "npm:4.14.202"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6731,6 +6742,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/jest-dom", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:6.4.2"],\
           ["@testing-library/react", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:14.2.1"],\
           ["@trivago/prettier-plugin-sort-imports", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:4.3.0"],\
+          ["@types/lodash", "npm:4.14.202"],\
           ["@types/node", "npm:20.11.19"],\
           ["@types/react", "npm:18.2.57"],\
           ["@types/react-dom", "npm:18.2.19"],\
@@ -6744,6 +6756,7 @@ const RAW_RUNTIME_STATE =
           ["highlight.run", "npm:8.4.1"],\
           ["jsdom", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:24.0.0"],\
           ["kbar", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:0.1.0-beta.45"],\
+          ["lodash", "npm:4.17.21"],\
           ["logrocket", "npm:3.0.1"],\
           ["next", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:14.1.1-canary.61"],\
           ["notyf", "npm:3.10.0"],\
