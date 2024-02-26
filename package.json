@@ -21,9 +21,9 @@
     "start": "yarn _conc 'yarn:build:ts:watch' 'yarn:build:scss:watch'",
     "build": "yarn _conc 'yarn:build:ts' 'yarn:build:scss'",
     "lint": "yarn _conc 'yarn:lint:ts' 'yarn:lint:deps'",
-    "lint:fix": "yarn lint:fix:biome && yarn lint:fix:next",
-    "format": "yarn _conc 'yarn:format:biome' 'yarn:format:imports'",
-    "format:fix": "yarn format:fix:biome && yarn format:fix:imports",
+    "lint:fix": "yarn lint:ts:fix:biome && yarn lint:ts:fix:next",
+    "format": "yarn _conc 'yarn:format:ts:biome' 'yarn:format:ts:imports'",
+    "format:fix": "yarn format:ts:fix:biome && yarn format:ts:fix:imports",
     "test": "vitest run",
     "test:watch": "vitest",
     "build:ts": "next build",
@@ -34,22 +34,32 @@
     "lint:ts:fix": "yarn lint:ts:fix:biome && yarn lint:ts:fix:next",
     "lint:ts:biome": "biome lint --max-diagnostics 100 ./src",
     "lint:ts:fix:biome": "yarn lint:biome --apply",
-    "lint:ts:fix:unsafe:biome": "yarn lint:biome --apply-unsafe",
+    "lint:ts:fix:unsafe:biome": "yarn lint:ts:biome --apply-unsafe",
     "lint:ts:next": "next lint",
-    "lint:ts:fix:next": "yarn lint:next --fix",
+    "lint:ts:fix:next": "yarn lint:ts:next --fix",
     "lint:ts:types": "tsc --project tsconfig.json",
     "lint:deps": "yarn _conc 'yarn:lint:deps:audit' 'yarn:lint:deps:cache'",
     "lint:deps:audit": "yarn npm audit --all --recursive",
     "lint:deps:cache": "yarn install --immutable --immutable-cache --check-cache --check-resolutions --refresh-lockfile",
     "lint:ci": "yarn _conc 'yarn:lint:ci:biome' 'yarn:lint:ts:next' 'yarn:lint:ts:types' 'yarn:lint:deps'",
     "lint:ci:biome": "biome ci --formatter-enabled=false --linter-enabled=true --organize-imports-enabled=false --max-diagnostics 1000 ./src",
-    "format:biome": "biome format ./src",
-    "format:fix:biome": "yarn format:biome --write",
-    "format:imports": "prettier src --check",
-    "format:fix:imports": "yarn format:imports --write",
-    "format:ci": "yarn _conc 'yarn:format:ci:biome' 'yarn:format:imports'",
+    "format:ts:biome": "biome format ./src",
+    "format:ts:fix:biome": "yarn format:ts:biome --write",
+    "format:ts:imports": "prettier src --check",
+    "format:ts:fix:imports": "yarn format:ts:imports --write",
+    "format:ci": "yarn _conc 'yarn:format:ci:biome' 'yarn:format:ts:imports'",
     "format:ci:biome": "biome ci --formatter-enabled=true --linter-enabled=false --organize-imports-enabled=false --max-diagnostics 1000 ./src",
-    "_conc": "concurrently -p '[{time}-{name}-{pid}]' -t 'HH:mm:ss.SS' -c 'auto'"
+    "_conc": "concurrently -p '[{time}-{name}-{pid}]' -t 'HH:mm:ss.SS' -c 'auto'",
+    "postinstall": "husky"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn lint:ts:fix",
+      "yarn format:fix"
+    ],
+    "*.scss": [
+      "yarn build:scss"
+    ]
   },
   "browserslist": {
     "production": [
