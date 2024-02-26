@@ -18,7 +18,11 @@ const Home = () => {
     setOs(getOs());
   }, []);
 
-  return <div className={styles.cta}>{os}</div>;
+  return (
+    <div role="heading" aria-level={1} className={styles.cta}>
+      {os}
+    </div>
+  );
 };
 
 export default Home;

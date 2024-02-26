@@ -4,6 +4,10 @@
     "dbaeumer.vscode-eslint",
     "jota0222.multi-formatter",
     "esbenp.prettier-vscode",
-    "biomejs.biome"
+    "biomejs.biome",
+    "vitest.explorer",
+    "wallabyjs.wallaby-vscode",
+    "file-icons.file-icons",
+    "usernamehw.errorlens"
   ]
 }
