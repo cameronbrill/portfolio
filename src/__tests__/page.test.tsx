@@ -1,13 +1,23 @@
-import { expect, test, describe } from "vitest";
+import { expect, test, describe, vi, afterEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 
 import Home from "../app/page";
 
-describe.concurrent("Home component", () => {
-  test("should render the correct shortcut based on the OS", () => {
+describe("Home page K-Bar command suggestion", () => {
+  afterEach(() => {
+    vi.resetAllMocks();
+  });
+
+  test.each([
+    ["Macintosh", "⌘+K"],
+    ["Other", "ctrl+K"],
+  ])("on %s OS is: %s", (os, expected) => {
+    const userAgentGetter = vi.spyOn(window.navigator, "userAgent", "get");
+    userAgentGetter.mockReturnValue(os);
+
     render(<Home />);
 
-    const shortcut = screen.getByText(/⌘+K|ctrl+K/i); // Matches either "⌘+K" or "ctrl+K"
+    const shortcut = screen.getByRole("heading", { name: expected });
 
     expect(shortcut).toBeInTheDocument();
   });
