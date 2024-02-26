@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        command: ["lint:ci", "format:ci", "build:scss"]
+        command: ["lint:ci", "format:ci", "build:scss", "build:ts", "test"]
     steps:
       - uses: actions/checkout@v4
 
