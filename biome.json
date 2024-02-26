@@ -5,7 +5,8 @@
   },
   "files": {
     "ignore": [
-      ".prettierrc.js"
+      ".prettierrc.js",
+      ".yarn/*"
     ]
   },
   "linter": {
