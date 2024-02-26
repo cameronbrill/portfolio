@@ -6,7 +6,8 @@
   "files": {
     "ignore": [
       ".prettierrc.js",
-      ".yarn/*"
+      ".yarn/*",
+      "vitest.config.mts"
     ]
   },
   "linter": {
