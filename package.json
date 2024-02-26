@@ -33,7 +33,7 @@
     "lint:ts": "yarn _conc 'yarn:lint:ts:biome' 'yarn:lint:ts:next' 'yarn:lint:ts:types'",
     "lint:ts:fix": "yarn lint:ts:fix:biome && yarn lint:ts:fix:next",
     "lint:ts:biome": "biome lint --max-diagnostics 100 ./src",
-    "lint:ts:fix:biome": "yarn lint:biome --apply",
+    "lint:ts:fix:biome": "yarn lint:ts:biome --apply",
     "lint:ts:fix:unsafe:biome": "yarn lint:ts:biome --apply-unsafe",
     "lint:ts:next": "next lint",
     "lint:ts:fix:next": "yarn lint:ts:next --fix",
