@@ -4172,6 +4172,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"husky@npm:^9.0.11":
+  version: 9.0.11
+  resolution: "husky@npm:9.0.11"
+  bin:
+    husky: bin.mjs
+  checksum: 10/8a9b7cb9dc8494b470b3b47b386e65d579608c6206da80d3cc8b71d10e37947264af3dfe00092368dad9673b51d2a5ee87afb4b2291e77ba9e7ec1ac36e56cd1
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
@@ -5684,6 +5693,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-next: "npm:^14.1.0"
     highlight.run: "npm:^8.4.1"
+    husky: "npm:^9.0.11"
     jsdom: "npm:^24.0.0"
     kbar: "npm:^0.1.0-beta.21"
     lodash: "npm:^4.17.21"
