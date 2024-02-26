@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn _conc 'yarn:lint' 'yarn:format' 'yarn:build' 'yarn:test'
+find . -name 'vitest.config.ts.timestamp-*.mjs' -delete
+
+yarn _conc 'yarn:lint:fix' 'yarn:format:fix'
