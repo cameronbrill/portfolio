@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        command: ["lint:ci", "format:ci", "build:scss", "build:ts", "test"]
+        command: ["lint:ci", "format:ci", "build:scss", "build:ts", "test:coverage"]
     steps:
       - uses: actions/checkout@v4
 
@@ -42,3 +42,7 @@ jobs:
         run: yarn ${{ matrix.command }}
         env:
           FORCE_COLOR: 2
+      - name: 'Report Coverage'
+        if:  ${{ matrix.command == 'test:coverage' }}
+        uses:  davelosert/vitest-coverage-report-action@v2
+
