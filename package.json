@@ -25,6 +25,7 @@
     "format": "yarn _conc 'yarn:format:ts:biome' 'yarn:format:ts:imports'",
     "format:fix": "yarn format:ts:fix:biome && yarn format:ts:fix:imports",
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
     "build:ts": "next build",
     "build:ts:watch": "next dev",
