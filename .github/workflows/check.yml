@@ -50,8 +50,6 @@ jobs:
         run: yarn ${{ matrix.command }}
         env:
           FORCE_COLOR: 2
-      - run: ls -la './src/__tests__/coverage/
-      - run: ls -la './src/__tests__/coverage/.tmp
       - name: 'Report Coverage'
         if: always() && ${{ matrix.command == 'test:coverage' }}
         uses:  davelosert/vitest-coverage-report-action@v2
