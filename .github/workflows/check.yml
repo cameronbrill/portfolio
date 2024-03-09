@@ -52,9 +52,9 @@ jobs:
           FORCE_COLOR: 2
           CONDITION: always()
           CONDITION2: ${{ matrix.command == 'test:coverage' }}
-          CONDITION3: always() && ${{ matrix.command != 'test:coverage' }}
+          CONDITION3: ${{ matrix.command == 'test:coverage' }} && always()
       - name: 'Report Coverage'
-        if: always() && ${{ matrix.command != 'test:coverage' }}
+        if: ${{ matrix.command == 'test:coverage' }} && always() 
         uses:  davelosert/vitest-coverage-report-action@v2
         with:
           json-summary-path	: './src/__tests__/coverage/coverage-summary.json'
