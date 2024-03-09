@@ -7,9 +7,12 @@ export default defineConfig({
     environment: 'jsdom',
     globals:true,
     setupFiles: "src/setupTests.ts",
+    reporters: ['default', 'html', 'json'],
     coverage: {
       provider: 'istanbul',
-      reporter: ['json']
+      all: true,
+      reporter: ["json", "text", "html", "json-summary"],
+      reportsDirectory: './src/__tests__/coverage'
     }
   },
 })
