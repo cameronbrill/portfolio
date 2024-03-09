@@ -12,7 +12,8 @@ export default defineConfig({
       provider: 'istanbul',
       all: true,
       reporter: ["json", "text", "html", "json-summary"],
-      reportsDirectory: './src/__tests__/coverage'
+      reportsDirectory: './src/__tests__/coverage',
+      reportOnFailure: true,
     }
   },
 })
