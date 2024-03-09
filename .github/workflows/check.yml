@@ -50,6 +50,9 @@ jobs:
         run: yarn ${{ matrix.command }}
         env:
           FORCE_COLOR: 2
+          CONDITION: always()
+          CONDITION2: ${{ matrix.command == 'test:coverage' }}
+          CONDITION3: always() && ${{ matrix.command == 'test:coverage' }}
       - name: 'Report Coverage'
         if: always() && ${{ matrix.command == 'test:coverage' }}
         uses:  davelosert/vitest-coverage-report-action@v2
