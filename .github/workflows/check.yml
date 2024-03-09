@@ -56,5 +56,5 @@ jobs:
         if: always() && ${{ matrix.command == 'test:coverage' }}
         uses:  davelosert/vitest-coverage-report-action@v2
         with:
-          json-summary-path	: './src/__tests__/coverage/.tmp/coverage-0.json'
+          json-summary-path	: './src/__tests__/coverage/coverage-summary.json'
 
