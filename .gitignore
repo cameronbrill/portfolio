@@ -6,6 +6,7 @@
 .pnp.js
 
 # testing
+vitest.config.mts.timestamp-*.mjs
 vitest.config.ts.timestamp-*.mjs
 html/
 src/__tests__/coverage
