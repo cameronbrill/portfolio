@@ -20,5 +20,5 @@
   "vitest.watchOnStartup": true,
   "vitest.showFailMessages": true,
   "vitest.enable": true,
-  "vitest.commandLine": "yarn test:watch"
+  "vitest.commandLine": "yarn test:coverage:watch"
 }

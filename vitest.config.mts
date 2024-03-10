@@ -18,7 +18,7 @@ export default defineConfig({
         "**/.{idea,git,cache,output,temp,yarn}/**",
       ],
       provider: "istanbul",
-      reporter: ["json", "text", "html", "json-summary"],
+      reporter: ["json", "text", "html", "json-summary", "lcov"],
       reportsDirectory: "./src/__tests__/coverage",
       reportOnFailure: true,
       thresholds: {
