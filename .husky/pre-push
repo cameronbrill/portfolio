@@ -2,5 +2,6 @@
 . "$(dirname "$0")/_/husky.sh"
 
 find . -name 'vitest.config.ts.timestamp-*.mjs' -delete
+find . -name 'vitest.config.mts.timestamp-*.mjs' -delete
 
 yarn _conc 'yarn:lint:fix' 'yarn:format:fix'
