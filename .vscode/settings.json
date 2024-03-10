@@ -6,6 +6,10 @@
   },
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "Jota0222.multi-formatter",
+    "multiFormatter.formatterList": ["biomejs.biome", "esbenp.prettier-vscode"]
+  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "Jota0222.multi-formatter",
     "multiFormatter.formatterList": ["biomejs.biome", "esbenp.prettier-vscode"]
@@ -16,5 +20,5 @@
   "vitest.watchOnStartup": true,
   "vitest.showFailMessages": true,
   "vitest.enable": true,
-  "vitest.commandLine": "yarn test:watch"
+  "vitest.commandLine": "yarn test:coverage:watch"
 }
