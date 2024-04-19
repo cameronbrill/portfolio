@@ -9,6 +9,7 @@
     "wallabyjs.wallaby-vscode",
     "file-icons.file-icons",
     "usernamehw.errorlens",
-    "ryanluker.vscode-coverage-gutters"
+    "ryanluker.vscode-coverage-gutters",
+    "amodio.toggle-excluded-files"
   ]
 }
