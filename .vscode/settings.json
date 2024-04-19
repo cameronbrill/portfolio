@@ -17,6 +17,16 @@
   "editor.formatOnSave": true,
   "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "biome_lsp.trace.server": "verbose",
+  "files.exclude": {
+    "**/.*": true,
+    "**/*-env.d.ts": true,
+    "next.config.js": true,
+    "tsconfig.*": true,
+    "vitest.config.*": true,
+    "build": true,
+    "html": true,
+    "yarn.lock": true
+  },
   "vitest.watchOnStartup": true,
   "vitest.showFailMessages": true,
   "vitest.enable": true,
