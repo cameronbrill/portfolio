@@ -25,7 +25,8 @@
     "vitest.config.*": true,
     "build": true,
     "html": true,
-    "yarn.lock": true
+    "yarn.lock": true,
+    "mise.toml": true
   },
   "vitest.watchOnStartup": true,
   "vitest.showFailMessages": true,
