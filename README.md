@@ -1,12 +1,19 @@
 # portfolio
 
-my personal website using next.js nested layouts
+My personal website using next.js nested layouts.
 
 ## developing
 
 ### pre-requisite
 
-First, install dependencies
+This repository uses mise to manage yarn. So, firstly, install the correct yarn version.
+
+```
+mise trust ./mise.toml
+mise install
+```
+
+Then, install the dependencies.
 
 ```
 yarn
