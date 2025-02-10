@@ -509,6 +509,7 @@ __metadata:
 "@biomejs/cli-darwin-arm64@npm:1.5.3":
   version: 1.5.3
   resolution: "@biomejs/cli-darwin-arm64@npm:1.5.3"
+  checksum: 10/7814e167b418cf89a9ef302a07e15d1064acb191125a6e12883fbb898cd28de5cbe78e1406338d6434f6519ae7c0d8b61b8e4d82c57d7295709dfafedba80967
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -6083,6 +6084,7 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@biomejs/biome": "npm:1.5.3"
+    "@biomejs/cli-darwin-arm64": "npm:1.5.3"
     "@testing-library/jest-dom": "npm:^6.4.2"
     "@testing-library/react": "npm:^14.2.1"
     "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"

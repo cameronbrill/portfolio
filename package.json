@@ -79,6 +79,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
+    "@biomejs/cli-darwin-arm64": "1.5.3",
     "@testing-library/react": "^14.2.1",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/lodash": "^4",

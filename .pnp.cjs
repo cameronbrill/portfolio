@@ -27,6 +27,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@biomejs/biome", "npm:1.5.3"],\
+          ["@biomejs/cli-darwin-arm64", "npm:1.5.3"],\
           ["@testing-library/jest-dom", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:6.4.2"],\
           ["@testing-library/react", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:14.2.1"],\
           ["@trivago/prettier-plugin-sort-imports", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:4.3.0"],\
@@ -7228,6 +7229,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["portfolio", "workspace:."],\
           ["@biomejs/biome", "npm:1.5.3"],\
+          ["@biomejs/cli-darwin-arm64", "npm:1.5.3"],\
           ["@testing-library/jest-dom", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:6.4.2"],\
           ["@testing-library/react", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:14.2.1"],\
           ["@trivago/prettier-plugin-sort-imports", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:4.3.0"],\
