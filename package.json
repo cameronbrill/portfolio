@@ -10,7 +10,7 @@
     "classnames": "^2.3.1",
     "highlight.run": "^8.4.1",
     "kbar": "^0.1.0-beta.21",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "logrocket": "^3.0.0",
     "next": "canary",
     "notyf": "^3.10.0",
