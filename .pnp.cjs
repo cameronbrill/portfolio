@@ -2186,7 +2186,7 @@ const RAW_RUNTIME_STATE =
           ["@vitest/utils", "npm:1.3.1"],\
           ["fast-glob", "npm:3.3.2"],\
           ["fflate", "npm:0.8.2"],\
-          ["flatted", "npm:3.3.1"],\
+          ["flatted", "npm:3.4.2"],\
           ["pathe", "npm:1.1.2"],\
           ["picocolors", "npm:1.0.0"],\
           ["sirv", "npm:2.0.4"],\
@@ -4782,7 +4782,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/flat-cache-npm-3.2.0-9a887f084e-02381c6ece.zip/node_modules/flat-cache/",\
         "packageDependencies": [\
           ["flat-cache", "npm:3.2.0"],\
-          ["flatted", "npm:3.3.1"],\
+          ["flatted", "npm:3.4.2"],\
           ["keyv", "npm:4.5.4"],\
           ["rimraf", "npm:3.0.2"]\
         ],\
@@ -4790,10 +4790,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["flatted", [\
-      ["npm:3.3.1", {\
-        "packageLocation": "./.yarn/cache/flatted-npm-3.3.1-458870f59b-7b8376061d.zip/node_modules/flatted/",\
+      ["npm:3.4.2", {\
+        "packageLocation": "./.yarn/cache/flatted-npm-3.4.2-e32280259b-a9e78fe5c2.zip/node_modules/flatted/",\
         "packageDependencies": [\
-          ["flatted", "npm:3.3.1"]\
+          ["flatted", "npm:3.4.2"]\
         ],\
         "linkType": "HARD"\
       }]\
